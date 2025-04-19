@@ -117,7 +117,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: duhyeon # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -240,9 +240,9 @@ jekyll-minifier:
 # Terser
 # -----------------------------------------------------------------------------
 
-terser:
-  compress:
-    drop_console: true
+# terser:
+#   compress:
+#     drop_console: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives

@@ -1088,6 +1088,10 @@ nav[data-toggle="toc"] {
       border-left-color: var(--global-hover-color);
     }
   }
+  /* remove to make the sub toc disappear automatically */
+  .nav .nav {
+    display: block !important;
+  }
 }
 
 /* small screens */

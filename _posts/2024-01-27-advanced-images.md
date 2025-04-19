@@ -1,4 +1,6 @@
 ---
+hidden: true
+
 layout: post
 title: a post with advanced image components
 date: 2024-01-27 11:46:00
@@ -9,6 +11,7 @@ thumbnail: assets/img/9.jpg
 images:
   compare: true
   slider: true
+hidden : true
 ---
 
 This is an example post with advanced image components.
