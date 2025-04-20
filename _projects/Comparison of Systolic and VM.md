@@ -22,13 +22,13 @@ chart:
 #   sidebar: left
 ---
 
-## Comparison between Systolic Array and Vector Multiplier based on FPGA Implementation 🛠️
+## Comparison between<br>Systolic Array and Vector Multiplier<br>based on FPGA Implementation 🛠️
 
 This project pits **systolic arrays** against **vector multipliers** for matrix multiplication on Xilinx's `xcu250` FPGA. Let’s break it down! 🧠
 
 ---
 
-### <br>Introduction 🎯
+### Introduction 🎯
 With AI accelerators booming, efficient *matrix multiplication units (MXUs)* are critical. We compare:
 - **Systolic Arrays**: Inspired by Google’s TPUv1
 - **Vector Multipliers**: GPU-style adder-tree designs
@@ -37,21 +37,21 @@ Tested on matrix sizes from `8×8` to `64×64`, we dive into *timing*, *resource
 
 ---
 
-### <br>Architectural Highlights 🏗️
+### Architectural Highlights 🏗️
 - **Systolic Array**: A grid of PEs with *built-in pipelining*. Weights stay put, data flows—simple yet powerful! 🔄
 - **Vector Multiplier**: Direct vector ops with an adder tree. Needs *explicit pipelining* for big matrices. 🧮
 
 ---
 
-### <br>Implementation Snapshot 🔧
+### Implementation Snapshot 🔧
 - **FPGA**: `xcu250` UltraScale+
 - **Matrix Sizes**: `8×8`, `16×16`, `32×32`, `64×64`
 - **Vivado Flags**: `dont_touch`, `use_dsp`, `ram_style=block`
 
 ---
 
-### <br>Results Roundup 📊
-#### Resource Use
+### Results Roundup 📊
+#### <br>Resource Use
 - **Systolic Array**: Steady rise—e.g., `4096 DSPs` at 64×64.
 - **Vector Multiplier (Non-pipelined)**: Leaner but *timing flops* at scale.
 - **Vector Multiplier (Pipelined)**: Timing improves, but *LUTs soar* (e.g., `36166` at 64×64).
@@ -118,7 +118,7 @@ Tested on matrix sizes from `8×8` to `64×64`, we dive into *timing*, *resource
 
 ```
 
-#### Timing (Max Delay)
+#### <br>Timing (Max Delay)
 - **Systolic Array**: Rock-solid ~`5ns` across sizes. ⏱️
 - **Vector Multiplier (Non-pipelined)**: Delay balloons to `54.936ns` at 64×64. 😬
 - **Vector Multiplier (Pipelined)**: Better at `22.722ns`, but still lags.
@@ -201,13 +201,13 @@ Tested on matrix sizes from `8×8` to `64×64`, we dive into *timing*, *resource
 
 ---
 
-### <br>Key Takeaways 🔍
+### Key Takeaways 🔍
 - **Scalability**: Systolic arrays win with *consistent timing* and efficient growth. 🌟
 - **Trade-offs**: Vector multipliers need *heavy pipelining*, spiking resource use for big tasks.
 
 ---
 
-### <br>Conclusion 🏁
+### Conclusion 🏁
 - **Systolic Arrays**: Champs for *large-scale matrix ops*. 💪
 - **Vector Multipliers**: Fit for *smaller, parallel setups* (think GPUs).
 

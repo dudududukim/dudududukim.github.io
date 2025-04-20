@@ -44,22 +44,24 @@
       {% if include.height %}
         height="{{ include.height }}"
       {% else %}
-        height="auto" <!-- 고정 높이 설정 (원하는 픽셀 값으로 변경 가능) -->
+        height="auto"
       {% endif %}
-      style="object-fit: cover; {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
-        {% if include['min-width'] %}
-          min-width: {{ include.min-width }};
-        {% endif %}
-        {% if include['min-height'] %}
-          min-height: {{ include.min-height }};
-        {% endif %}
-        {% if include['max-width'] %}
-          max-width: {{ include.max-width }};
-        {% endif %}
-        {% if include['max-height'] %}
-          max-height: {{ include.max-height }};
-        {% endif %}
-      {% endif %}"
+      {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
+        style="
+          {% if include['min-width'] %}
+            min-width: {{ include.min-width }};
+          {% endif %}
+          {% if include['min-height'] %}
+            min-height: {{ include.min-height }};
+          {% endif %}
+          {% if include['max-width'] %}
+            max-width: {{ include.max-width }};
+          {% endif %}
+          {% if include['max-height'] %}
+            max-height: {{ include.max-height }};
+          {% endif %}
+        "
+      {% endif %}
       {% if include.alt %}
         alt="{{ include.alt }}"
       {% endif %}
@@ -76,7 +78,6 @@
       {% endif %}
       onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
     >
-
   </picture>
 
   {% if include.caption %}
