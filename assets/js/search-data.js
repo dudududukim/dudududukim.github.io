@@ -397,7 +397,12 @@ ninja.data = [{
             },},{id: "news-my-website-renewal-type-theme-️-al-folio",
           title: 'My website renewal (type-theme ➡️ al-folio) 🧑‍💻',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "projects-lyrics-based-music-recommandation",
+          title: 'Lyrics based Music recommandation',
+          description: "NLP projects done with klue/bert-base fine-tunning",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lyrics_sentiment_NLP/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
