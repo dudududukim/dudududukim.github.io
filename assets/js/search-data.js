@@ -397,9 +397,14 @@ ninja.data = [{
             },},{id: "news-my-website-renewal-type-theme-️-al-folio",
           title: 'My website renewal (type-theme ➡️ al-folio) 🧑‍💻',
           description: "",
-          section: "News",},{id: "projects-lyrics-based-music-recommandation",
+          section: "News",},{id: "projects-systolic-array-and-vector-multiplier",
+          title: 'Systolic Array and Vector Multiplier',
+          description: "based on FPGA Implementation",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Comparison%20of%20Systolic%20and%20VM/";
+            },},{id: "projects-lyrics-based-music-recommandation",
           title: 'Lyrics based Music recommandation',
-          description: "NLP projects done with klue/bert-base fine-tunning",
+          description: "with klue/bert-base fine-tunning",
           section: "Projects",handler: () => {
               window.location.href = "/projects/lyrics_sentiment_NLP/";
             },},{

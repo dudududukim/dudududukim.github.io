@@ -1,0 +1,143 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Systolic Array and Vector Multiplier | Duhyeon Kim </title> <meta name="author" content="Duhyeon Kim"> <meta name="description" content="based on FPGA Implementation"> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.css" integrity="sha256-uRX+PiRTR4ysKFRCykT8HLuRCub26LgXJZym3Yeom1c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%90%89&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://dudududukim.github.io/projects/Comparison%20of%20Systolic%20and%20VM/"> <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Duhyeon</span> Kim </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Systolic Array and Vector Multiplier</h1> <p class="post-description">based on FPGA Implementation</p> </header> <article> <h2 id="comparison-between-systolic-array-and-vector-multiplier-based-on-fpga-implementation-️">Comparison between Systolic Array and Vector Multiplier based on FPGA Implementation 🛠️</h2> <p>This project pits <strong>systolic arrays</strong> against <strong>vector multipliers</strong> for matrix multiplication on Xilinx’s <code class="language-plaintext highlighter-rouge">xcu250</code> FPGA. Let’s break it down! 🧠</p> <hr> <h3 id="introduction-"> <br>Introduction 🎯</h3> <p>With AI accelerators booming, efficient <em>matrix multiplication units (MXUs)</em> are critical. We compare:</p> <ul> <li> <strong>Systolic Arrays</strong>: Inspired by Google’s TPUv1</li> <li> <strong>Vector Multipliers</strong>: GPU-style adder-tree designs</li> </ul> <p>Tested on matrix sizes from <code class="language-plaintext highlighter-rouge">8×8</code> to <code class="language-plaintext highlighter-rouge">64×64</code>, we dive into <em>timing</em>, <em>resources</em>, and <em>scalability</em>. 📈</p> <hr> <h3 id="architectural-highlights-️"> <br>Architectural Highlights 🏗️</h3> <ul> <li> <strong>Systolic Array</strong>: A grid of PEs with <em>built-in pipelining</em>. Weights stay put, data flows—simple yet powerful! 🔄</li> <li> <strong>Vector Multiplier</strong>: Direct vector ops with an adder tree. Needs <em>explicit pipelining</em> for big matrices. 🧮</li> </ul> <hr> <h3 id="implementation-snapshot-"> <br>Implementation Snapshot 🔧</h3> <ul> <li> <strong>FPGA</strong>: <code class="language-plaintext highlighter-rouge">xcu250</code> UltraScale+</li> <li> <strong>Matrix Sizes</strong>: <code class="language-plaintext highlighter-rouge">8×8</code>, <code class="language-plaintext highlighter-rouge">16×16</code>, <code class="language-plaintext highlighter-rouge">32×32</code>, <code class="language-plaintext highlighter-rouge">64×64</code> </li> <li> <strong>Vivado Flags</strong>: <code class="language-plaintext highlighter-rouge">dont_touch</code>, <code class="language-plaintext highlighter-rouge">use_dsp</code>, <code class="language-plaintext highlighter-rouge">ram_style=block</code> </li> </ul> <hr> <h3 id="results-roundup-"> <br>Results Roundup 📊</h3> <h4 id="resource-use">Resource Use</h4> <ul> <li> <strong>Systolic Array</strong>: Steady rise—e.g., <code class="language-plaintext highlighter-rouge">4096 DSPs</code> at 64×64.</li> <li> <strong>Vector Multiplier (Non-pipelined)</strong>: Leaner but <em>timing flops</em> at scale.</li> <li> <strong>Vector Multiplier (Pipelined)</strong>: Timing improves, but <em>LUTs soar</em> (e.g., <code class="language-plaintext highlighter-rouge">36166</code> at 64×64).</li> </ul> <pre><code class="language-chartjs">{
+  "type": "bar",
+  "data": {
+    "labels": ["N=8", "N=16", "N=32", "N=64"],
+    "datasets": [
+      {
+        "label": "Systolic Array (LUT)",
+        "data": [202, 656, 1502, 4125],
+        "backgroundColor": "rgba(75, 192, 192, 0.7)",
+        "borderColor": "rgba(75, 192, 192, 1)",
+        "borderWidth": 1
+      },
+      {
+        "label": "Vector Multiplier (LUT)",
+        "data": [38, 87, 169, 325],
+        "backgroundColor": "rgba(255, 99, 132, 0.7)",
+        "borderColor": "rgba(255, 99, 132, 1)",
+        "borderWidth": 1
+      },
+      {
+        "label": "Vector Multiplier Pipelined (LUT)",
+        "data": [38, 87, 9129, 36166],
+        "backgroundColor": "rgba(255, 159, 64, 0.7)",
+        "borderColor": "rgba(255, 159, 64, 1)",
+        "borderWidth": 1
+      }
+    ]
+  },
+  "options": {
+    "responsive": true,
+    "plugins": {
+      "title": {
+        "display": true,
+        "text": "LUT Utilization Comparison (Log Scale)"
+      },
+      "tooltip": {
+        "mode": "index",
+        "intersect": false
+      }
+    },
+    "scales": {
+      "y": {
+        "type": "logarithmic",
+        "title": {
+          "display": true,
+          "text": "Number of LUTs (log scale)"
+        }
+      },
+      "x": {
+        "title": {
+          "display": true,
+          "text": "Matrix Size"
+        }
+      }
+    }
+  }
+}
+
+
+</code></pre> <h4 id="timing-max-delay">Timing (Max Delay)</h4> <ul> <li> <strong>Systolic Array</strong>: Rock-solid ~<code class="language-plaintext highlighter-rouge">5ns</code> across sizes. ⏱️</li> <li> <strong>Vector Multiplier (Non-pipelined)</strong>: Delay balloons to <code class="language-plaintext highlighter-rouge">54.936ns</code> at 64×64. 😬</li> <li> <strong>Vector Multiplier (Pipelined)</strong>: Better at <code class="language-plaintext highlighter-rouge">22.722ns</code>, but still lags.</li> </ul> <pre><code class="language-chartjs">{
+  "type": "line",
+  "data": {
+    "labels": ["N=8", "N=16", "N=32", "N=64"],
+    "datasets": [
+      {
+        "label": "Systolic Array",
+        "data": [4.995, 4.904, 4.443, 6.433],
+        "backgroundColor": "rgba(54, 162, 235, 0.2)",
+        "borderColor": "rgba(54, 162, 235, 1)",
+        "borderWidth": 2,
+        "pointRadius": 5,
+        "tension": 0.1
+      },
+      {
+        "label": "Vector Multiplier (non-pipelined)",
+        "data": [9.383, 13.413, 24.552, 54.936],
+        "backgroundColor": "rgba(255, 99, 132, 0.2)",
+        "borderColor": "rgba(255, 99, 132, 1)",
+        "borderWidth": 2,
+        "pointRadius": 5,
+        "tension": 0.1
+      },
+      {
+        "label": "Vector Multiplier (pipelined)",
+        "data": [6.16, 8.986, 8.509, 22.722],
+        "backgroundColor": "rgba(255, 159, 64, 0.2)",
+        "borderColor": "rgba(255, 159, 64, 1)",
+        "borderWidth": 2,
+        "pointRadius": 5,
+        "tension": 0.1
+      },
+      {
+        "label": "Vector Multiplier (pipelined + DSP flag)",
+        "data": [6.16, 8.986, 9.44, 25.555],
+        "backgroundColor": "rgba(153, 102, 255, 0.2)",
+        "borderColor": "rgba(153, 102, 255, 1)",
+        "borderWidth": 2,
+        "pointRadius": 5,
+        "tension": 0.1
+      }
+    ]
+  },
+  "options": {
+    "responsive": true,
+    "plugins": {
+      "title": {
+        "display": true,
+        "text": "Maximum Path Delay Comparison (ns)"
+      },
+      "tooltip": {
+        "mode": "index",
+        "intersect": false
+      }
+    },
+    "scales": {
+      "y": {
+        "title": {
+          "display": true,
+          "text": "Delay (ns)"
+        },
+        "beginAtZero": true
+      },
+      "x": {
+        "title": {
+          "display": true,
+          "text": "Matrix Size"
+        }
+      }
+    }
+  }
+}
+
+</code></pre> <hr> <h3 id="key-takeaways-"> <br>Key Takeaways 🔍</h3> <ul> <li> <strong>Scalability</strong>: Systolic arrays win with <em>consistent timing</em> and efficient growth. 🌟</li> <li> <strong>Trade-offs</strong>: Vector multipliers need <em>heavy pipelining</em>, spiking resource use for big tasks.</li> </ul> <hr> <h3 id="conclusion-"> <br>Conclusion 🏁</h3> <ul> <li> <strong>Systolic Arrays</strong>: Champs for <em>large-scale matrix ops</em>. 💪</li> <li> <strong>Vector Multipliers</strong>: Fit for <em>smaller, parallel setups</em> (think GPUs).</li> </ul> <blockquote> <p><em>In a nutshell: Systolic arrays rule for big matrix crunching; vector multipliers shine in compact roles!</em> 🚀</p> </blockquote> <div align="right"> <sub>Summarized using <i>Perplexity (Claude 3.7 Sonnet)</i> · Retouched by <i>Duhyeon Kim</i></sub> <br> <br> </div> <div class="pdf-container"> <h2>Project Report</h2> <div class="row"> <div class="col-sm-12"> <style>.responsive-pdf{height:600px;width:100%}@media(min-width:768px){.responsive-pdf{height:800px}}#pdf-viewer-wrapper{margin-bottom:30px}</style> <div id="pdf-viewer-wrapper"> <object id="pdf-object" data="/assets/projects/ee2.pdf#zoom=110" type="application/pdf" class="responsive-pdf d-none d-md-block"> <p>Your browser doesn't support embedded PDFs. Please <a href="/assets/projects/ee2.pdf">click here to download the PDF</a>.</p> </object> <iframe id="pdf-iframe" src="https://docs.google.com/gview?url=https://dudududukim.github.io/assets/projects/ee2.pdf&amp;embedded=true" class="responsive-pdf d-block d-md-none" frameborder="0"></iframe> </div> </div> </div> </div> <div class="ppt-container"> <h2>Presentation</h2> <div class="row"> <div class="col-sm-12"> <style>.responsive-ppt{height:300px;width:100%;border-radius:4px;border:1px solid #eaeaea}@media(min-width:768px){.responsive-ppt{height:550px}}</style> <iframe src="https://docs.google.com/viewer?url=https://dudududukim.github.io%2Fassets%2Fprojects%2Fee2.key&amp;embedded=true" class="responsive-ppt" frameborder="0"> This browser does not support embedded frames. </iframe> </div> </div> <div class="text-left mt-3"> <style>.download-btn{display:inline-flex;align-items:center;background-color:var(--global-card-bg-color,#fff);color:var(--global-theme-color,#0076df);border:1px solid var(--global-divider-color,rgba(0,0,0,0.1));border-radius:4px;padding:8px 16px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s ease;box-shadow:0 1px 2px rgba(0,0,0,0.1)}.download-btn:hover{background-color:var(--global-hover-color,#005cb2);box-shadow:0 3px 5px rgba(0,0,0,0.2);color:var(--global-hover-text-color,#fff);transform:translateY(-1px);border-color:transparent}.download-btn svg{margin-right:8px;fill:var(--global-theme-color,#0076df)}.download-btn:hover svg{fill:var(--global-hover-text-color,#fff)}.format-badge{display:inline-block;background-color:var(--global-theme-color,#0076df);color:white;font-size:11px;font-weight:600;padding:2px 6px;border-radius:3px;margin-left:8px;letter-spacing:.5px}</style> <a href="/assets/projects/ee2.pdf" class="download-btn" role="button" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"> <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path> <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path> </svg> Download Presentation <span class="format-badge">PDF</span> </a> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2025 Duhyeon Kim. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. All photos from <a href="https://www.linkedin.com/feed/" target="_blank" rel="external nofollow noopener">Duhyeon Kim</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" integrity="sha256-0q+JdOlScWOHcunpUk21uab1jW7C1deBQARHtKMcaB4=" crossorigin="anonymous"></script> <script defer src="/assets/js/chartjs-setup.js?183c5859923724fb1cb3c67593848e71" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script defer src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.js" integrity="sha256-4rppopQE9POKfukn2kEvhJ9Um25Cf6+IDVkARD0xh78=" crossorigin="anonymous"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-PL3J05TNB5"></script> <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-PL3J05TNB5');
+  </script> <script defer src="/assets/js/google-analytics-setup.js"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script> </body> </html>
