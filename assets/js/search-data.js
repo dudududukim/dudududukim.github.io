@@ -412,6 +412,11 @@ ninja.data = [{
           description: "with klue/bert-base fine-tunning",
           section: "Projects",handler: () => {
               window.location.href = "/projects/lyrics_sentiment_NLP/";
+            },},{id: "projects-uegan-mps-implementation",
+          title: 'UEGAN mps Implementation',
+          description: "focusing on changes for Apple Silicon (mps) support.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/uegan_mps/";
             },},{
         id: 'social-email',
         title: 'email',
