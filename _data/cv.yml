@@ -1,97 +1,158 @@
+# if you want to use resume.json, follow the url : https://github.com/alshedivat/al-folio/blob/main/assets/json/resume.json
+
 - title: General Information
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Duhyeon Kim (김두현)
+    - name: Contact
+      value: +82 10-6654-9551, kdhluck@naver.com
+    - name: Location
+      value: Seoul, Seongbuk-gu, 119 Gireum-ro, 221-dong, 1403-ho, South Korea
     - name: Languages
-      value: English, German
+      value: Korean (Native), English (OPIc IH)
+
+- title: Profile
+  type: list
+  contents:
+    - Self-motivated student passionate about AI algorithms, software frameworks, and hardware systems. Experienced in deep learning and system optimization for cutting-edge applications. Eager to develop valuable computing services for human interaction.
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: B.S., Electrical Engineering
+      institution: Korea University, Seoul, South Korea
+      year: 2019 - February 2026 (expected)
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - GPA 4.05/4.5
+        - title: Relevant Coursework
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+            - Advanced Machine Learning (A)
+            - Natural Language Processing (A+)
+            - Computer Vision (A)
+            - Digital Image Processing (A+)
+            - Digital System Design (A+)
+            - Digital Integrated Circuits (A+)
+            - VLSI Design and Laboratory (A+)
+            - Probability And Random Process (A+)
 
-- title: Experience
+- title: Projects
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Advanced Machine Learning (DATA303)
+      institution: Korea University
+      year: Spring 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Hands-on experience with generative models (VAE, Normalizing Flow, GAN, Diffusion) in PyTorch
+        - Optimized conditional generation, reconstruction quality, and stability through latent space enhancement and feature matching
+
+    - title: Natural Language Processing (COSE461)
+      institution: Korea University
+      year: Spring 2024
       description:
-        - Description 1.
-        - Description 2.
+        - Developed a sentiment analysis architecture with attention mechanisms and Conv1D layers for lyrics classification
+        - Fine-tuned the klue/bert-base model and introduced emotion similarity-based evaluation metrics
+        - Built a cosine similarity-based recommendation engine for emotion-driven song suggestions
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: HandS (Academic Society)
+      institution: Korea University
+      year: 2024.03-Present
       description:
+        - Led the development of a smart shared refrigerator system using Raspberry Pi 4B, Arduino UNO, and ESP32-CAM
+        - Integrated RFID-based access control, OpenCV-powered inventory management, and a 3-axis robotic mechanism
+        - Designed a maze-solving robot using 2N7000 MOSFET-based logic gates without a microprocessor, achieving fastest completion time
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: Code Generation and System Optimization (KECE456)
+      institution: Korea University
+      year: Fall 2024
+      description:
+        - Optimized matrix multiplication on Raspberry Pi 4B using loop-tiling, SIMD, and OpenMP, achieving 17x performance improvement
+        - Designed a context-free grammar parser with a doubly linked list-based parse tree using Bison
+        - Extended RISC-V ISA by adding an IMAD instruction in LLVM and GCC for optimized 1-D convolution performance
 
-- title: Open Source Projects
+    - title: VLSI Design and Laboratory (KECE463)
+      institution: Korea University
+      year: Spring 2024
+      description:
+        - Designed a 32×32 matrix multiplier with parallel 4-MAC units, SRAM timing control, and pipeline optimization
+        - Created an area-optimized 2D-DCT hardware for JPEG compression, reducing area to 25% of original size
+
+    - title: Computer Architecture (COSE222)
+      institution: Korea University
+      year: Fall 2024
+      description:
+        - Designed and implemented a RISC-V 5-stage pipelined processor with hazard detection and data forwarding
+
+    - title: Engineering Design II (KECE404)
+      institution: Korea University
+      year: Fall 2024
+      description:
+        - Developed a weight-stationary systolic array and an adder-tree-based vector multiplier for matrix multiplication
+        - Analyzed resource utilization, timing, and scalability for varying matrix sizes using Xilinx FPGAs and Vivado
+
+- title: Teaching Experience
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Physics Tutor, High School 2nd Grade
+      institution: 
+      year: Jan 2020 - Jun 2020
+      description:
+        - Analyzed school exam patterns and designed targeted lessons, helping student achieve a perfect midterm score
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - title: Physics Tutor, High School Group (2 students)
+      institution: Daechi-dong 8th School District
+      year: Feb 2023 - Dec 2023
+      description:
+        - Instructed top-performing students with optimized problem-solving approaches
+        - One student was admitted to Konkuk University's College of Veterinary Medicine after choosing Physics for CSAT
 
-- title: Academic Interests
+    - title: Physics Tutor, Middle School Group (3 students)
+      institution: Daechi-dong
+      year: Sep 2023 - Dec 2023
+      description:
+        - Combined group and individualized instruction for students with diverse academic backgrounds
+        - Focused on conceptual understanding for students new to physics
+
+    - title: Mentor, Engineering Club
+      institution: Kyungshin High School
+      year: Feb 2023, Aug 2024
+      description:
+        - Participated in annual mentoring sessions for students aspiring to major in engineering
+        - Shared university engineering experiences and provided guidance on career opportunities
+
+    - title: Mentor, "제3회 청소년 메이커 경진대회"
+      institution: 
+      year: Aug 2024
+      description:
+        - Mentored the "Safe Pass Bus Service" team that won the competition
+        - Provided guidance on business planning, product development, and presentation strategies
+
+- title: Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Programming
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - PyTorch, Python, C, Matlab, (System)Verilog
+    - title: EDA Tools
       items:
-        - Description 1.
-        - Description 2.
+        - Xilinx Vivado, Intel Quartus, Synopsys Design Compiler
+    - title: Simulation & Verification
+      items:
+        - RTL design and simulation using Icarus Verilog (iverilog), GTKWave
+    - title: Others
+      items:
+        - Github, Bash Shell, Markdown, Keynotes/Powerpoint, Pages/한글, Excel
 
-- title: Other Interests
-  type: list
+- title: External Activities and Learning
+  type: time_table
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - year: Jul 2024
+      items:
+        - CUDA Optimization for Single and Multi-GPU Performance
+    - year: Jan-Feb 2024
+      items:
+        - AI Engineer Fundamentals Online Course (Naver connect)
+        - Data Science Projects Coaching Study (Naver connect)
+    - year: Feb 2024
+      items:
+        - MCL Winter Internship (Media Communication Lab) at Korea University

@@ -1,0 +1,210 @@
+---
+layout: default
+title: Teaching & Mentoring
+description: My experience in teaching and academic mentoring roles.
+---
+
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="post-description">{{ page.description | escape }}</p>{% endif %}
+  </header>
+
+  <div class="post-content">
+    <div class="teaching">
+      {%- if site.data.teaching and site.data.teaching.size > 0 -%}
+        {% assign grouped_experiences = site.data.teaching | group_by: "type" %}
+
+        {% for group in grouped_experiences %}
+          <h2 class="category-heading">{{ group.name }}</h2>
+
+          {% assign experiences_sorted = "" %}
+          {% if group.name == "Private Tutoring" %}
+            {% assign experiences_sorted = group.items | sort: "startDate" | reverse %}
+          {% elsif group.name == "Academic Mentoring" %}
+            {% assign experiences_sorted = group.items | sort: "Date" | reverse %}
+          {% else %}
+            {% assign experiences_sorted = group.items %}
+          {% endif %}
+
+          {% for experience in experiences_sorted %}
+            <div class="teaching-entry mb-4">
+              <div class="teaching-header d-flex justify-content-between align-items-center flex-wrap">
+                <h4 class="teaching-position mb-0 mr-3">
+                  <strong>{{ experience.position }}</strong> <span class="at-location">at&nbsp;&nbsp;{{ experience.institution }}</span>
+                </h4>
+                <div class="teaching-date text-muted">
+                  {% if experience.type == "Private Tutoring" %}
+                    {% assign start_date = experience.startDate | date: "%b %Y" %}
+                    {% assign end_date = experience.endDate | date: "%b %Y" %}
+                    {{ start_date }} – {{ end_date }}
+                  {% elsif experience.type == "Academic Mentoring" %}
+                    {% if experience.Date.size > 1 %}
+                       {{ experience.Date | join: ", " }}
+                    {% else %}
+                       {{ experience.Date }}
+                    {% endif %}
+                  {% endif %}
+                </div>
+              </div>
+
+              <div class="teaching-details mt-2 ml-4">
+                {% if experience.type == "Private Tutoring" %}
+                  <div class="detail-row">
+                    <div class="icon-container"><i class="fas fa-book"></i></div>
+                    <div class="detail-content"><strong>Subject:</strong> {{ experience.subject }}</div>
+                  </div>
+                  <div class="detail-row">
+                    <div class="icon-container"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="detail-content"><strong>Duration:</strong>
+                      {% assign start_date = experience.startDate | date: "%b %Y" %}
+                      {% assign end_date = experience.endDate | date: "%b %Y" %}
+                      {{ start_date }} – {{ end_date }}
+                    </div>
+                  </div>
+                  <div class="detail-row">
+                    <div class="icon-container"><i class="fas fa-users"></i></div>
+                    <div class="detail-content"><strong>Students:</strong>
+                      {% if experience.studentCount %}
+                        {{ experience.studentCount }} ({{ experience.studentLevel }})
+                      {% else %}
+                        N/A
+                      {% endif %}
+                    </div>
+                  </div>
+                {% elsif experience.type == "Academic Mentoring" %}
+                  <div class="detail-row">
+                    <div class="icon-container"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="detail-content"><strong>Event Date(s):</strong>
+                      {% if experience.Date.size > 1 %}
+                         {{ experience.Date | join: ", " }}
+                      {% else %}
+                         {{ experience.Date }}
+                      {% endif %}
+                    </div>
+                  </div>
+                  <div class="detail-row">
+                    <div class="icon-container"><i class="fas fa-info-circle"></i></div>
+                    <div class="detail-content">{{ experience.description }}</div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+            {% unless forloop.last %}
+              <hr class="my-3">
+            {% endunless %}
+          {% endfor %}
+
+          {% unless forloop.last %}
+            <div class="section-divider mb-5 mt-5"></div>
+          {% endunless %}
+        {% endfor %}
+      {% else %}
+        <p>No teaching or mentoring experiences listed yet.</p>
+      {%- endif -%}
+    </div>
+  </div>
+
+</article>
+
+<style>
+  .category-heading {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--global-theme-color); /* Kept as is, already using variable */
+    color: var(--global-theme-color);                 /* Kept as is, already using variable */
+    font-size: 1.5rem;
+  }
+
+  .section-divider {
+    border-top: 1px solid var(--global-divider-color); /* Use divider color variable */
+    margin: 2rem 0;
+  }
+
+  .teaching-entry {
+  }
+
+  .teaching-header {
+  }
+
+  .teaching-position {
+      font-weight: bold;
+      color: var(--global-text-color); /* Use main text color */
+  }
+
+  .at-location {
+    margin-left: 0.5rem;
+    font-weight: normal;
+    color: var(--global-text-color-light); /* Use lighter text color for secondary info */
+  }
+
+  .teaching-date {
+      white-space: nowrap;
+      margin-left: auto;
+      padding-left: 1rem;
+      /* Date color will inherit from parent or use default text color.
+         If needed, explicitly set: color: var(--global-text-color-light); */
+  }
+
+  .teaching-details {
+    margin-top: 0.75rem;
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  .detail-row {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: start;
+    color: var(--global-text-color); /* Ensure detail text uses main text color */
+  }
+
+  .icon-container {
+    width: 1.5em;
+    text-align: center;
+    margin-right: 0.75rem;
+    color: var(--global-theme-color); /* Kept as is, already using variable */
+    margin-top: 0.1em;
+  }
+
+  .detail-content {
+    flex: 1;
+    line-height: 1.5;
+  }
+
+  .detail-content strong {
+      /* Use main text color for emphasis, or theme color if desired */
+      color: var(--global-text-color);
+      /* Alternative: color: var(--global-theme-color); */
+  }
+
+  hr {
+      border: 0;
+      height: 1px;
+      background-color: var(--global-divider-color); /* Use divider color variable */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .teaching-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .teaching-date {
+        margin-left: 0;
+        padding-left: 0;
+        margin-top: 0.25rem;
+    }
+    .teaching-details {
+      margin-left: 0.5rem;
+    }
+    .at-location {
+      display: block;
+      margin-left: 0;
+      margin-top: 0.2rem;
+    }
+  }
+</style>

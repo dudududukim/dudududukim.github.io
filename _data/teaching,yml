@@ -1,0 +1,55 @@
+categories: 
+  - "Private Tutoring"
+  - "Academic Mentoring"
+
+experience:
+  - category: "Private Tutoring"
+    title: "High School 2nd Grade Physics Tutor"
+    institution: ""
+    duration: "January 2020 - June 2020"
+    description: "Designed targeted physics lessons based on school exam pattern analysis."
+    achievements:
+      - "Student achieved perfect score (100) on midterm exam"
+      - "Developed customized learning materials based on student's learning style"
+
+  - category: "Private Tutoring"
+    title: "Physics Tutor for High School Group"
+    institution: "Daechi-dong 8th School District"
+    duration: "February 2023 - December 2023"
+    description: "Instructed top-performing high school students in physics, focusing on optimized problem-solving approaches."
+    achievements:
+      - "Taught 2 students with personalized instruction tailored to their skill levels"
+      - "One student was admitted to Konkuk University's College of Veterinary Medicine after choosing Physics for CSAT"
+
+  - category: "Private Tutoring"
+    title: "Physics Tutor for Middle School Group"
+    institution: "Daechi-dong"
+    duration: "September 2023 - December 2023"
+    description: "Conducted physics program for students with diverse academic backgrounds."
+    achievements:
+      - "Led 4-month program combining group and individualized instruction for 3 students"
+      - "Focused on conceptual understanding for students new to physics"
+
+  - category: "Private Tutoring"
+    title: "Math Tutor"
+    institution: ""
+    duration: "2019 - 2020"
+    description: "Private math tutoring for cousin, approximately 1 year."
+
+  - category: "Academic Mentoring"
+    title: "Mentor, Engineering Club"
+    institution: "Kyungshin High School"
+    duration: "February 2023, August 2024"
+    description: "Participated in annual mentoring sessions for students aspiring to major in engineering."
+    achievements:
+      - "Shared university engineering experiences and curriculum insights"
+      - "Provided guidance on educational pathways and career opportunities in technology and engineering"
+
+  - category: "Academic Mentoring"
+    title: "Mentor, \"제3회 청소년 메이커 경진대회\""
+    institution: ""
+    duration: "August 2024"
+    description: "Mentored the \"Safe Pass Bus Service\" team that won the competition."
+    achievements:
+      - "Provided guidance on business planning, product development, and presentation strategies"
+      - "Helped team refine their project ideas and implementation approaches"

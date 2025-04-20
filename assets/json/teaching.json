@@ -1,0 +1,57 @@
+[
+    {
+      "type": "Private Tutoring",
+      "institution": "대치",
+      "position": "Physics",
+      "startDate": "2023-01-01",
+      "endDate": "2023-12-31",
+      "subject": "Physics",
+      "studentLevel": "2nd-year High School",
+      "studentCount": 2
+    },
+    {
+      "type": "Private Tutoring", 
+      "institution": "성북",
+      "position": "Physics",
+      "startDate": "2020-01-01",
+      "endDate": "2020-06-30",
+      "subject": "Physics",
+      "studentLevel": "2nd-year High School",
+      "studentCount": 1
+    },
+    {
+      "type": "Private Tutoring",
+      "institution": "성북",
+      "position": "Mathematics",
+      "startDate": "2019-08-01",
+      "endDate": "2020-06-30",
+      "subject": "Mathematics",
+      "studentLevel": "1st-year High School",
+      "studentCount": 1
+    },
+    {
+      "type": "Private Tutoring",
+      "institution": "대치",
+      "position": "Physics",
+      "startDate": "2023-08-01",
+      "endDate": "2024-01-31",
+      "subject": "Physics",
+      "studentLevel": "Middle School",
+      "studentCount": 3
+    },
+    {
+      "type": "Academic Mentoring",
+      "institution": "경신고등학교",
+      "position": "Engineering Club Mentor",
+      "Date": ["2023-02", "2024-08"],
+      "description": "공대 진학을 희망하는 학생들을 위한 연1회 멘토링 세션에 참여함. 실질적인 대학 공학 경험과 커리큘럼을 공유하고 기술 분야 교육 경로 및 공학 진로 기회에 대한 상담을 진행함."
+    },
+    {
+      "type": "Academic Mentoring",
+      "institution": "제3회 청소년 메이커경진대회",
+      "position": "Project Mentor",
+      "Date": "2024-08",
+      "description": "\"안심 패스버스 서비스\" 팀(대회 우승) 멘토링을 수행함. 사업 계획, 제품 개발, 발표 전략에 대한 토론과 프로젝트 아디어 발전을 위한 멘토링을 진행함."
+    }
+  ]
+  
