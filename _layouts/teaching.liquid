@@ -30,10 +30,13 @@ description: My experience in teaching and academic mentoring roles.
 
           {% for experience in experiences_sorted %}
             <div class="teaching-entry mb-4">
-              <div class="teaching-header d-flex justify-content-between align-items-center flex-wrap">
-                <h4 class="teaching-position mb-0 mr-3">
-                  <strong>{{ experience.position }}</strong> <span class="at-location">at&nbsp;&nbsp;{{ experience.institution }}</span>
-                </h4>
+              <div class="teaching-header">
+                <div class="teaching-title-row">
+                  <h4 class="teaching-position mb-0 mr-3">
+                    <strong>{{ experience.position }}</strong>
+                    <span class="at-location">at&nbsp;&nbsp;{{ experience.institution }}</span>
+                  </h4>
+                </div>
                 <div class="teaching-date text-muted">
                   {% if experience.type == "Private Tutoring" %}
                     {% assign start_date = experience.startDate | date: "%b %Y" %}
@@ -49,7 +52,7 @@ description: My experience in teaching and academic mentoring roles.
                 </div>
               </div>
 
-              <div class="teaching-details mt-2 ml-4">
+              <div class="teaching-details mt-2">
                 {% if experience.type == "Private Tutoring" %}
                   <div class="detail-row">
                     <div class="icon-container"><i class="fas fa-book"></i></div>
@@ -113,13 +116,13 @@ description: My experience in teaching and academic mentoring roles.
     margin-top: 2rem;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--global-theme-color); /* Kept as is, already using variable */
-    color: var(--global-theme-color);                 /* Kept as is, already using variable */
+    border-bottom: 2px solid var(--global-theme-color);
+    color: var(--global-theme-color);
     font-size: 1.5rem;
   }
 
   .section-divider {
-    border-top: 1px solid var(--global-divider-color); /* Use divider color variable */
+    border-top: 1px solid var(--global-divider-color);
     margin: 2rem 0;
   }
 
@@ -127,47 +130,60 @@ description: My experience in teaching and academic mentoring roles.
   }
 
   .teaching-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .teaching-title-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   .teaching-position {
-      font-weight: bold;
-      color: var(--global-text-color); /* Use main text color */
+    font-weight: bold;
+    color: var(--global-text-color);
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
   }
 
   .at-location {
     margin-left: 0.5rem;
     font-weight: normal;
-    color: var(--global-text-color-light); /* Use lighter text color for secondary info */
+    color: var(--global-text-color-light);
+    display: inline;
+    margin-top: 0;
   }
 
   .teaching-date {
-      white-space: nowrap;
-      margin-left: auto;
-      padding-left: 1rem;
-      /* Date color will inherit from parent or use default text color.
-         If needed, explicitly set: color: var(--global-text-color-light); */
+    white-space: nowrap;
+    margin-left: auto;
+    padding-left: 1rem;
   }
 
   .teaching-details {
     margin-top: 0.75rem;
-    margin-left: 1rem;
-    padding-left: 0.5rem;
+    /* margin-left와 padding-left 제거 */
   }
 
   .detail-row {
     margin: 0.5rem 0;
     font-size: 0.95rem;
     display: flex;
-    align-items: start;
-    color: var(--global-text-color); /* Ensure detail text uses main text color */
+    align-items: center; /* 아이콘과 텍스트를 같은 라인에 정렬 */
+    color: var(--global-text-color);
   }
 
   .icon-container {
     width: 1.5em;
     text-align: center;
     margin-right: 0.75rem;
-    color: var(--global-theme-color); /* Kept as is, already using variable */
-    margin-top: 0.1em;
+    color: var(--global-theme-color);
+    /* margin-top: 0.1em; 제거하여 중앙정렬 */
   }
 
   .detail-content {
@@ -176,15 +192,13 @@ description: My experience in teaching and academic mentoring roles.
   }
 
   .detail-content strong {
-      /* Use main text color for emphasis, or theme color if desired */
-      color: var(--global-text-color);
-      /* Alternative: color: var(--global-theme-color); */
+    color: var(--global-text-color);
   }
 
   hr {
-      border: 0;
-      height: 1px;
-      background-color: var(--global-divider-color); /* Use divider color variable */
+    border: 0;
+    height: 1px;
+    background-color: var(--global-divider-color);
   }
 
   /* Responsive adjustments */
@@ -193,18 +207,23 @@ description: My experience in teaching and academic mentoring roles.
       flex-direction: column;
       align-items: flex-start;
     }
+    .teaching-title-row {
+      flex-direction: row;
+      align-items: center;
+    }
     .teaching-date {
-        margin-left: 0;
-        padding-left: 0;
-        margin-top: 0.25rem;
+      margin-left: 0;
+      padding-left: 0;
+      margin-top: 0.25rem;
+      align-self: flex-start;
     }
     .teaching-details {
-      margin-left: 0.5rem;
+      /* margin-left: 0.5rem; 제거 */
     }
     .at-location {
-      display: block;
-      margin-left: 0;
-      margin-top: 0.2rem;
+      margin-left: 0.5rem;
+      margin-top: 0;
+      display: inline;
     }
   }
 </style>
