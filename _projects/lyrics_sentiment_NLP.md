@@ -18,6 +18,7 @@ pretty_table: true
 #   sidebar: left
 ---
 
+
 ## 노래 가사의 감정 분석을 통한 음악 추천 시스템 🎶
 
 이 프로젝트는 **노래 가사의 감정 분석**을 통해 사용자에게 *감정적으로 유사한 음악*을 추천하는 시스템을 개발했습니다. 기존의 음악 추천 시스템이 주로 사용자 로그와 청취 패턴에 의존하는 것과 달리, **가사의 감정적 요소**를 활용하여 *시공간적 제약을 뛰어넘는* 추천 시스템을 구현했습니다. 이는 음악을 새로운 관점에서 탐색하고, 감정적으로 연결된 곡을 발견하는 데 도움을 줍니다 🌟.
@@ -79,12 +80,13 @@ pretty_table: true
 
 ---
 
-## 가사 기반 추천 시스템 구현 🔥
+### 가사 기반 추천 시스템 구현 🔥
 
 최종적으로 수집된 한국어 가사에 개선된 모델(**Architecture 2**)을 적용하여 각 노래의 감정 분석을 진행했습니다. 분석 결과를 바탕으로 **코사인 유사도**를 계산하여 감정적으로 유사한 곡들을 추천할 수 있는 시스템을 구현했습니다.
 
 랜덤으로 선택된 10곡 간의 코사인 유사도 히트맵을 통해 **감정적으로 유사한 곡들**이 시대나 장르에 관계없이 높은 유사도를 보이는 것을 확인할 수 있었습니다 🎵.
 
+{::options parse_block_html="true" /}
 
 <details>
 <summary markdown="span">`눈물 (feat. 유진 of 더 씨야) - 리쌍`</summary>
@@ -106,7 +108,7 @@ pretty_table: true
 
 
 <details>
-<summary markdown="span">`아로하 - 쿨(COOL)`</summary>
+<summary  markdown="span">`아로하 - 쿨(COOL)`</summary>
 
 | Rank | Song | Artist | Similarity |
 |------|------|--------|------------|
@@ -124,7 +126,7 @@ pretty_table: true
 </details>
 
 <details>
-<summary markdown="span">`내사랑 내곁에 - 김현식`</summary>
+<summary  markdown="span">`내사랑 내곁에 - 김현식`</summary>
 
 | Rank | Song | Artist | Similarity |
 |------|------|--------|------------|
@@ -141,14 +143,22 @@ pretty_table: true
 
 </details>
 
+{::options parse_block_html="false" /}
+
+
 ---
 
-## 결론 및 시사점 💡
+### 결론 및 시사점 💡
 
 이 프로젝트는 **가사의 감정 분석**을 통해 *시공간적 제약을 뛰어넘는* 음악 추천 시스템의 가능성을 보여주었습니다. 특히 한국어 가사 데이터셋 부재라는 한계를 극복하기 위한 **모델 아키텍처 개선**과 **평가 지표 제안**은 감정 분석 연구에 중요한 기여를 했습니다.
 
 감정 분석 모델이 단순히 분류 정확도를 높이는 것보다 **감정 간 연관성을 학습**하는 것이 중요하다는 점은, 향후 감성 분석 연구에서 고려해야 할 중요한 시사점입니다 🌍.
 
+<div align="right">
+<sub>Summarized using <i>Perplexity (Claude 3.7 Sonnet)</i> · Retouched by <i>Duhyeon Kim</i></sub>
+<br>
+<br>
+</div>
 
 {% include pdf_viewer.liquid %}
 
