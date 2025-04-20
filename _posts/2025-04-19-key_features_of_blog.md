@@ -11,7 +11,8 @@ tabs: true
 toc:
   sidebar: left
 featured : true
-thumbnail : assets/img/prof_pic_color.png
+thumbnail : assets/img/jekyll.svg
+
 ---
 
 ## Introduction

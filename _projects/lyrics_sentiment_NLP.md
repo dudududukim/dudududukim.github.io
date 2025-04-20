@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Lyrics based Music recommandation
-description: NLP projects done with klue/bert-base fine-tunning
+description: with klue/bert-base fine-tunning
 img: assets/img/bert.png
 importance: 1
 category: work
@@ -10,6 +10,9 @@ pdf_path: /assets/projects/nlp_project.pdf
 ppt_path: /assets/projects/lyrics_recommandation.pptx
 
 pretty_table: true
+
+
+project_date: 2024-06-18
 
 # chart:
 #   chartjs: true

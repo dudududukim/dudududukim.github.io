@@ -11,6 +11,10 @@ ppt_path: /assets/projects/ee2.key
 
 pretty_table: true
 
+project_date: 2024-11-21
+
+github: https://github.com/dudududukim/basic_systolic_array_HDL
+
 chart:
   chartjs: true
 
