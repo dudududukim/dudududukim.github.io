@@ -31,7 +31,7 @@ ninja.data = [{
             window.location.href = "/cv/";
           },
         },{id: "nav-teaching",
-          title: "Teaching",
+          title: "teaching",
           description: "저의 교육 및 강의 경험 목록입니다.",
           section: "Navigation",
           handler: () => {
@@ -402,6 +402,11 @@ ninja.data = [{
           description: "based on FPGA Implementation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Comparison%20of%20Systolic%20and%20VM/";
+            },},{id: "projects-dct-module-area-optimization",
+          title: 'DCT Module area optimization',
+          description: "several methology for VLSI optimizations",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dct/";
             },},{id: "projects-lyrics-based-music-recommandation",
           title: 'Lyrics based Music recommandation',
           description: "with klue/bert-base fine-tunning",
