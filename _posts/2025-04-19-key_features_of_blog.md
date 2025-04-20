@@ -11,6 +11,7 @@ tabs: true
 toc:
   sidebar: left
 featured : true
+thumbnail : assets/img/prof_pic_color.png
 ---
 
 ## Introduction

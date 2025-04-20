@@ -1,0 +1,41 @@
+{% if page.ppt_path %}
+<div class="ppt-container">
+  <h2>Presentation</h2>
+  <div class="row">
+    <div class="col-sm-12">
+      <style>
+        /* 모바일 환경 기본 설정 */
+        .responsive-ppt {
+          height: 300px;
+          width: 100%;
+          border-radius: 4px;
+          border: 1px solid #eaeaea;
+        }
+        
+        /* 노트북/데스크톱 환경 (768px 이상) */
+        @media (min-width: 768px) {
+          .responsive-ppt {
+            height: 550px;
+          }
+        }
+      </style>
+      
+      {% assign file_extension = page.ppt_path | split: "." | last %}
+      
+      {% if file_extension == "key" %}
+        <iframe src="https://docs.google.com/viewer?url={{ site.url }}{{ page.ppt_path | url_encode }}&embedded=true" class="responsive-ppt" frameborder="0">
+          This browser does not support embedded frames.
+        </iframe>
+      {% else %}
+        <iframe src="https://view.officeapps.live.com/op/embed.aspx?src={{ site.url }}{{ page.ppt_path | url_encode }}" class="responsive-ppt" frameborder="0">
+          This browser does not support embedded frames.
+        </iframe>
+      {% endif %}
+    </div>
+  </div>
+  <div class="text-left mt-3">
+    {% assign file_extension = "pdf" %}
+    {% include download_button.liquid file_extension=file_extension file_path=page.pdf_path button_text="Download Presentation" %}
+  </div>
+</div>
+{% endif %}
