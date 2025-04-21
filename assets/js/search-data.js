@@ -413,9 +413,14 @@ ninja.data = [{
           description: "based on FPGA Implementation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Comparison%20of%20Systolic%20and%20VM/";
+            },},{id: "projects-d2f-digital-2-film",
+          title: 'd2f (digital 2 film)',
+          description: "deep learning-based film grain and color synthesis",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/d2f/";
             },},{id: "projects-dct-module-area-optimization",
           title: 'DCT Module area optimization',
-          description: "several methology for VLSI optimizations",
+          description: "methologys for VLSI optimizations",
           section: "Projects",handler: () => {
               window.location.href = "/projects/dct/";
             },},{id: "projects-lyrics-based-music-recommandation",
