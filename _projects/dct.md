@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DCT Module <br>area optimization
-description: several methology for VLSI optimizations
+description: methologys for VLSI optimizations
 img: assets/img/dct.jpg
 importance: 1
 category: work

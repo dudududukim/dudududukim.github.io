@@ -2,7 +2,7 @@
 layout: post
 title: Best Practices for PyTorch Training
 date: 2025-04-21 09:26:47 +09:00
-last_updated: 2025-04-21 10:44:58 +09:00
+last_updated: 2025-04-21 11:45:05 +09:00
 description: Clean, efficient PyTorch code conventions, libraries, structure, best practices.
 tags: pytorch ML
 categories: programming
@@ -83,7 +83,7 @@ Vgg perceptual loss 같은 경우에, pretrained model의 .feature 을 불러와
 
 ### Train Code Structure
 
-<div markdown="1" style="border: 1px solid #ccc; padding: 1em; border-radius: 4px; background-color: var(--global-theme-bg);">
+<div markdown="1" style="border: 1px solid var(--global-theme-color-light); padding: 1em; border-radius: 4px; background-color: var(--global-theme-bg);">
 **Import**  
 **seed**  
 
