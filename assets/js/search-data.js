@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "post-tips-to-write-blog-md",
+        },{id: "post-best-practices-for-pytorch-training",
+        
+          title: "Best Practices for PyTorch Training",
+        
+        description: "Clean, efficient PyTorch code conventions, libraries, structure, best practices.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/good_code_for_pytorch/";
+          
+        },
+      },{id: "post-tips-to-write-blog-md",
         
           title: "Tips to write blog .md",
         
