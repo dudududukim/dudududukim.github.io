@@ -45,6 +45,17 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
+            window.location.href = "/blog/2025/me/";
+          
+        },
+      },{id: "post-best-practices-for-pytorch-training",
+        
+          title: "Best Practices for PyTorch Training",
+        
+        description: "Clean, efficient PyTorch code conventions, libraries, structure, best practices.",
+        section: "Posts",
+        handler: () => {
+          
             window.location.href = "/blog/2025/good_code_for_pytorch/";
           
         },
