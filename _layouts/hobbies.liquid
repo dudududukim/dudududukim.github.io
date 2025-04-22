@@ -1,0 +1,83 @@
+---
+layout: default
+---
+<div class="post">
+
+  <article>
+    <div class="hobbies">
+      {{ content }}
+      
+      <div class="hobbies-grid">
+        {% for hobby in page.hobbies %}
+          <div class="hobby-card">
+            <h2 class="hobby-name">{{ hobby.name }}</h2>
+            <div class="hobby-details">
+              {% if hobby.experience %}
+                <p><strong>Experience:</strong> {{ hobby.experience }}</p>
+              {% endif %}
+              {% if hobby.level %}
+                <p><strong>Level:</strong> {{ hobby.level }}</p>
+              {% endif %}
+              {% if hobby.frequency %}
+                <p><strong>Frequency:</strong> {{ hobby.frequency }}</p>
+              {% endif %}
+              {% if hobby.histories %}
+                <p><strong>Histories:</strong> {{ hobby.histories }}</p>
+              {% endif %}
+              <p class="hobby-description">{{ hobby.description }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </article>
+</div>
+
+<style>
+  .hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .hobby-card {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--global-card-bg-color);
+  }
+  
+  .hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .hobby-name {
+    color: var(--global-theme-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--global-theme-color);
+    padding-bottom: 5px;
+    display: inline-block;
+  }
+  
+  .hobby-details p {
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+  
+  .hobby-description {
+    margin-top: 12px;
+    font-style: italic;
+    color: var(--global-text-color-light);
+  }
+  
+  @media (max-width: 768px) {
+    .hobbies-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
