@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
+        },{id: "nav-hobbies",
+          title: "hobbies",
+          description: "Duhyeon in rest Time.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/hobbies/";
+          },
         },{id: "post-best-practices-for-pytorch-training",
         
           title: "Best Practices for PyTorch Training",
