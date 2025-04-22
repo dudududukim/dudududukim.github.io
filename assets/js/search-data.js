@@ -45,17 +45,6 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/me/";
-          
-        },
-      },{id: "post-best-practices-for-pytorch-training",
-        
-          title: "Best Practices for PyTorch Training",
-        
-        description: "Clean, efficient PyTorch code conventions, libraries, structure, best practices.",
-        section: "Posts",
-        handler: () => {
-          
             window.location.href = "/blog/2025/good_code_for_pytorch/";
           
         },
@@ -439,6 +428,11 @@ ninja.data = [{
           description: "with klue/bert-base fine-tunning",
           section: "Projects",handler: () => {
               window.location.href = "/projects/lyrics_sentiment_NLP/";
+            },},{id: "projects-smart-shared-fridge-system",
+          title: 'Smart Shared Fridge System',
+          description: "embedded system with RPi and OpenCV",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/smart_fridge/";
             },},{id: "projects-uegan-mps-implementation",
           title: 'UEGAN mps Implementation',
           description: "focusing on changes for Apple Silicon (mps) support.",
