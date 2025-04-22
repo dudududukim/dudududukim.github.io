@@ -3,5 +3,5 @@ permalink: /robots.txt
 ---
 User-agent: *
 Disallow:
-
-Sitemap: https://dudududukim.github.io/sitemap.xml
+Allow: /
+Sitemap: {{ '/sitemap.xml' | relative_url | prepend: site.url }}
