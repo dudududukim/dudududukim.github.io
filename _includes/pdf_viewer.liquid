@@ -22,7 +22,7 @@
       </style>
       <!-- PDF Viewer: Use iframe on mobile, object on desktop -->
       <div id="pdf-viewer-wrapper">
-        <object id="pdf-object" data="{{ page.pdf_path | relative_url }}#zoom=110" type="application/pdf" class="responsive-pdf d-none d-md-block">
+        <object id="pdf-object" data="{{ page.pdf_path | relative_url }}" type="application/pdf" class="responsive-pdf d-none d-md-block">
           <p>Your browser doesn't support embedded PDFs. Please <a href="{{ page.pdf_path | relative_url }}">click here to download the PDF</a>.</p>
         </object>
         <iframe id="pdf-iframe" src="https://docs.google.com/gview?url={{ page.pdf_path | absolute_url }}&embedded=true" class="responsive-pdf d-block d-md-none" frameborder="0"></iframe>

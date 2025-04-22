@@ -89,6 +89,11 @@
       {% if include.title %}
         title="{{ include.title }}"
       {% endif %}
+      {% if include['aspect-ratio'] %}
+        style="aspect-ratio: {{ include['aspect-ratio'] }};"
+      {% else %}
+        style="aspect-ratio: 3 / 2;"
+      {% endif %}
     />
   {% endif %}
   {% if include.caption %}

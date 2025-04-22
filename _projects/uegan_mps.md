@@ -15,7 +15,7 @@ project_date: 2025-02-27
 
 math: true
 
-github: "https://github.com/dudududukim/UEGAN-mps"
+github: https://github.com/dudududukim/UEGAN-mps
 
 # chart:
 #   chartjs: true
