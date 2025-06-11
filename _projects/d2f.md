@@ -3,7 +3,7 @@ layout: page
 title: d2f (digital 2 film)
 description: deep learning-based film grain and color synthesis
 img: assets/img/dark_room.jpg
-importance: 2
+importance: 1
 category: work
 
 pdf_path: 

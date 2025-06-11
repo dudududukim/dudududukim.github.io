@@ -7,27 +7,27 @@ nav: true # 상단 네비게이션 바에 표시할지 여부
 nav_order: 6 # 네비게이션 바에서의 순서
 hobbies:
   - name: Squash
-    experience: 1 year
-    description: 스쿼시가 라켓 운동 중에 가장 고강도이지 않을까 십네요.
+    experience: 1.5 year
+    description: Youtube 쇼츠의 알고리즘을 점령하고 있는 스쿼시
     level: Advanced
     # frequency: Twice a week
     
   - name: Swimming
     experience: 10+ years
-    description: 너무 더운 날이면 종종 생각날수도...
+    description: 유일한 전신운동
     level: Advanced
     # frequency: Three times a week
 
   - name: Bicycle
     experience: 10+ years
-    description: 자전거를 타면 마치 나만 여유로운 것 같기도 해요.
+    description: 자전거와 음악은 찰떡궁합
     level: Expert # 거의 전문가 수준
     # frequency: Once a week
     
   - name: Traveling
     # experience: 10+ years
     description: 때로는 갑자기 떠나도 좋아요.
-    level: Enthusiast
+    level: Intermediate
     histories: 🇯🇵, 🇨🇭, 🇮🇹, 🇪🇸, 🇰🇷
 ---
 

@@ -1427,12 +1427,14 @@ figure.cover {
 
 // 블로그 썸네일 이미지 스타일
 .blog-thumbnail {
-  height: 150px !important; // 원하는 고정 높이
+  height: 150px !important;
   width: 100%;
-  object-fit: fill !important;
+  object-fit: contain !important;
+  object-position: center;
   display: block;
   margin: 0 auto;
 }
+
 
 /* 모바일 크기에 대한 미디어 쿼리 */
 @media only screen and (max-width: 560px) {

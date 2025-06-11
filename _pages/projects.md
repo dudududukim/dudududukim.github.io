@@ -10,12 +10,12 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
-<div class="projects">
+<div class="projects" style="margin-top: -1rem;">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
   {% for category in page.display_categories %}
     <a id="{{ category }}" href=".#{{ category }}">
-      <h2 class="category">{{ category }}</h2>
+      <h2 class="category" style="margin-top: 1rem;">{{ category }}</h2>
     </a>
     {% assign categorized_projects = site.projects | where: "category", category %}
     {%- comment -%}
@@ -43,7 +43,6 @@ horizontal: false
   {% endfor %}
 
 {% else %}
-
   <!-- Display projects without categories -->
   {%- comment -%}
     importance(오름차순, 낮을수록 먼저) → project_date(내림차순, 최신이 먼저)

@@ -3,7 +3,7 @@ layout: page
 title: UEGAN mps Implementation
 description: focusing on changes for Apple Silicon (mps) support.
 img: assets/img/mps.jpg
-importance: 2
+importance: 1
 category: work
 
 pdf_path:

@@ -33,6 +33,9 @@
         <!-- 날짜를 오른쪽 아래에 배치 -->
         {% if project.project_date %}
           <p class="card-text text-muted position-absolute" style="bottom: 0.75rem; right: 1.25rem; margin-bottom: 0;">
+            {% if project.ongoing %}
+              <span class="ongoing-indicator" style="display: inline-block; width: 8px; height: 8px; background-color: #28a745; border-radius: 50%; margin-right: 6px;"></span>
+            {% endif %}
             {{ project.project_date | date: "%Y.%m" }}
           </p>
         {% endif %}
