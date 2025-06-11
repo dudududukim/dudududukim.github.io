@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/hobbies/";
           },
-        },{id: "post-best-practices-for-pytorch-training",
+        },{id: "post-cursor-amp-lovable",
+        
+          title: "Cursor &amp; Lovable",
+        
+        description: "AI agent-powered development workflow using Lovable for automated web application development.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/lovable_curosr/";
+          
+        },
+      },{id: "post-best-practices-for-pytorch-training",
         
           title: "Best Practices for PyTorch Training",
         
@@ -52,7 +63,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/good_code_for_pytorch/";
+            window.location.href = "/blog/2025/good_code_for_pytorch-copy/";
           
         },
       },{id: "post-tips-to-write-blog-md",
@@ -430,11 +441,21 @@ ninja.data = [{
           description: "methologys for VLSI optimizations",
           section: "Projects",handler: () => {
               window.location.href = "/projects/dct/";
+            },},{id: "projects-jetson-nano-4gb-for-ai",
+          title: 'Jetson Nano 4GB for AI',
+          description: "Utilizing Jetson Nano for my pet monitoring",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/jetson_nano/";
             },},{id: "projects-lyrics-based-music-recommandation",
           title: 'Lyrics based Music recommandation',
           description: "with klue/bert-base fine-tunning",
           section: "Projects",handler: () => {
               window.location.href = "/projects/lyrics_sentiment_NLP/";
+            },},{id: "projects-pytorch-seminar-2025",
+          title: 'PyTorch Seminar 2025',
+          description: "Lecturing PyTorch training code structure and Neural Style Transfer",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pytorhc_seminar_2025/";
             },},{id: "projects-smart-shared-fridge-system",
           title: 'Smart Shared Fridge System',
           description: "embedded system with RPi and OpenCV",
