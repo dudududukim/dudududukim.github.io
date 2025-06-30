@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/hobbies/";
           },
-        },{id: "post-cursor-amp-lovable",
+        },{id: "post-jetson-nano-dev-log",
+        
+          title: "Jetson Nano Dev Log",
+        
+        description: "Jetson Nano object Tracking Dev Logs",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/jetson-nano-dev-log/";
+          
+        },
+      },{id: "post-cursor-amp-lovable",
         
           title: "Cursor &amp; Lovable",
         
@@ -445,7 +456,7 @@ ninja.data = [{
           title: 'Jetson Nano 4GB for AI',
           description: "Utilizing Jetson Nano for my pet monitoring",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/jetson_nano/";
+              window.location.href = "/projects/jetson_nano_dev_log/";
             },},{id: "projects-lyrics-based-music-recommandation",
           title: 'Lyrics based Music recommandation',
           description: "with klue/bert-base fine-tunning",
