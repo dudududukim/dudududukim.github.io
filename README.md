@@ -40,6 +40,14 @@ The website consists of the following main sections:
 
 ---
 
+## Starting
+
+```bash
+docker compose pull
+docker compose up
+# http://localhost:8080
+```
+
 ## ⚖️ License
 
 This project uses the [**al-folio**](https://github.com/alshedivat/al-folio) theme under the [MIT License](LICENSE).

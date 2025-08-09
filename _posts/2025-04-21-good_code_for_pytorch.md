@@ -2,7 +2,7 @@
 layout: post
 title: Best Practices for PyTorch Training
 date: 2025-04-21 09:26:47 +09:00
-last_updated: 2025-04-21 11:45:05 +09:00
+last_updated: 2025-08-09 13:36:30 +09:00
 description: Clean, efficient PyTorch code conventions, libraries, structure, best practices.
 tags: pytorch ML
 categories: programming
@@ -15,7 +15,7 @@ pretty_table: true
 # toc:
 #     sidebar: left
     
-featured : true
+featured : false
 thumbnail : assets/img/pytorch.svg
 related_posts: false
 
