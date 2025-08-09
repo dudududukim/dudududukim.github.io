@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/hobbies/";
           },
-        },{id: "post-jetson-nano-dev-log",
+        },{id: "post-where-should-i-focus",
+        
+          title: "Where should i focus?",
+        
+        description: "Thinking about my interests",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/Where-should-i-focus/";
+          
+        },
+      },{id: "post-jetson-nano-dev-log",
         
           title: "Jetson Nano Dev Log",
         
@@ -74,7 +85,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/good_code_for_pytorch-copy/";
+            window.location.href = "/blog/2025/good_code_for_pytorch/";
           
         },
       },{id: "post-tips-to-write-blog-md",
@@ -436,6 +447,9 @@ ninja.data = [{
               window.location.href = "/books/the_godfather/";
             },},{id: "news-my-website-renewal-type-theme-️-al-folio",
           title: 'My website renewal (type-theme ➡️ al-folio) 🧑‍💻',
+          description: "",
+          section: "News",},{id: "news-starting-internship-at-kaist-iclab",
+          title: 'Starting internship at KAIST, ICLab. ✅',
           description: "",
           section: "News",},{id: "projects-systolic-array-and-vector-multiplier",
           title: 'Systolic Array and Vector Multiplier',

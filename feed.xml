@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://dudududukim.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://dudududukim.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-06-30T14:36:05+00:00</updated><id>https://dudududukim.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">Jetson Nano Dev Log</title><link href="https://dudududukim.github.io/blog/2025/jetson-nano-dev-log/" rel="alternate" type="text/html" title="Jetson Nano Dev Log"/><published>2025-06-30T13:57:47+00:00</published><updated>2025-06-30T13:57:47+00:00</updated><id>https://dudududukim.github.io/blog/2025/jetson-nano-dev-log</id><content type="html" xml:base="https://dudududukim.github.io/blog/2025/jetson-nano-dev-log/"><![CDATA[<p><a href="https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#intro">Get Started with Jetson Nano Developer Kit</a></p> <hr/> <h3 id="install-os-to-jetson-nano">Install OS to jetson Nano</h3> <p>as my device(jetson nano) has no sd card slot, i need to install with the SDK. Jetson as internal eMMC 16GB for installing the os <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion">VMware Fusion</a></p> <hr/> <h3 id="1-jetson-nano-sdk-manager">1. Jetson Nano SDK manager</h3> <p>OS booting with Jetpack 4.x</p> <p>There exist specific ubuntu version (16 or 18) to install jetpack 4.6.</p> <p>And wifi ac9260 card is not suit for Jetpack 4.x.</p> <hr/> <h3 id="2-vnc-server-setting">2. VNC server setting</h3> <p>https://developer.nvidia.com/embedded/learn/tutorials/vnc-setup</p> <p>Not similar with rasberrypi which deals vnc server with GUI.</p> <p>Nvidia official provides the site to figure out vnc server setting.</p> <hr/> <h3 id="3-following-hello-ai-world-course">3. Following “Hello AI World” course</h3> <p>https://github.com/dusty-nv/jetson-inference/blob/master/docs/aux-docker.md</p> <p>cloning and downloading docker file</p> <hr/> <h3 id="4-object-detection-and-image-classification">4. object detection and image classification</h3> <p>In Object detection, you could use temporal base column filtering in real world application.</p> <p>Detection Dataset : <a href="https://storage.googleapis.com/openimages/web/visualizer/index.html?set=train&amp;type=detection&amp;c=%2Fm%2F0fp6w">OpenImagesDataset</a></p> <hr/> <h3 id="5-using-pre-defined-jetsoninference-package">5. Using Pre-defined jetson.inference package</h3> <p>After building the c++ and binding it with python, we can use c++ code in python function.</p> <p>Which means we can inference with TensorRT optimized model computation.</p> <p>So we need to make build with following guide <a href="https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo.md">Building the Project from Source</a></p> <p>(samsung notebook)</p> <hr/> <h3 id="1-what-does-build-do">1. What does build do?</h3> <p>내가 코드및시스템최적화 수업에서 build를 한적이 있다.</p> <p>c++코드의 loop tiling, simd, urolling 등 기법을 적용하고 torch build를 했었다.</p> <p>역할은 C++ 라이브러리를 컴파일하고, 컴파일된 오브젝트 파일을 TensorRT나 CUDA 라이브러리와 링크해 가속 추론이 가능한 실행 파일과 라이브러리를 생성하며, C++ 코드를 Python에서 사용할 수 있도록 바인딩 파일을 만들고, 필요한 의존성을 자동으로 점검한다.</p> <p>https://github.com/jugfk/installVSCode</p> <p>https://code.visualstudio.com/updates/v1_85</p> <p>https://binl.tistory.com/entry/SK-Telecom-%EA%B3%B5%EC%9C%A0%EA%B8%B0-%ED%8F%AC%ED%8A%B8%ED%8F%AC%EC%9B%8C%EB%94%A9-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-2023%EB%85%84-5%EC%9B%94</p> <p>할루시네이션 ufw port에 22를 넣어야하는데 서비스포트넣으라고 해서 한참 또 해멤…..</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/jetson1-480.webp 480w,/assets/img/jetson1-800.webp 800w,/assets/img/jetson1-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/jetson1.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> <blockquote> <p>Mission CLEAR!</p> </blockquote> <hr/> <h3 id="2-labeling-detection-for-뚱땅이">2. Labeling detection for 뚱땅이</h3> <p>My projects’ two main goal is to track 뚱땅이 loaction and sound.</p> <p>Since when our family get out of home, 뚱땅이 starts to bark and it’s a now big problem for my family.</p> <p>So firstly, designing the monitoring tool with jetson nano, and adding functional actinos to stabilize 뚱땅이.</p> <p>Using open source tool <a href="https://github.com/HumanSignal/labelImg?tab=readme-ov-file">LabelImg</a> to annotate my own dataset.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install labelImg
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://dudududukim.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://dudududukim.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-08-09T06:23:30+00:00</updated><id>https://dudududukim.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">Where should i focus?</title><link href="https://dudududukim.github.io/blog/2025/Where-should-i-focus/" rel="alternate" type="text/html" title="Where should i focus?"/><published>2025-08-09T02:22:20+00:00</published><updated>2025-08-09T02:22:20+00:00</updated><id>https://dudududukim.github.io/blog/2025/Where%20should%20i%20focus</id><content type="html" xml:base="https://dudududukim.github.io/blog/2025/Where-should-i-focus/"><![CDATA[<p>나의 고민의 시작점은 내가 어디에 위치하고 싶은지이다.</p> <p>지금까지 AI full pipeline을 경험하면서 나의 재미를 자극한 분야는 2가지이다.</p> <ol> <li> <p>HW design : HDL을 활용하는 하드웨어 디자인이다. Havgin steep learning curve. 내가 학부기간동안 재밋게 공부해온 내용이기 때문에 쉽게 놓기 힘든 것 같다.</p> </li> <li> <p>SW/System Architect : 내가 사실 공학분야로 들어온 근본적인 이유이기도 하다. 결국 동작하는 코드의 흐름에 관심이 있었고, 그 작동원리에 관심을 가지다보니 학부를 Digital Circuit을 전공했다. 그리고 이제는 System Architect로의 발걸음을 뻗을지 고민 중이다.</p> </li> </ol> <p>이 두가지에 내가 왜 호기심을 가질까?</p> <p>사실 의문이였다. 두가지는 공학 pipeline에서 기술스택 상으로 양끝에 존재하기 때문에, 나에게 질문을 해도 왜 이 2가지가 나에게 재밋을까?는 딱 떠오르지 않았다.</p> <p>GPT-5에게 물어봤더니, 바로 통찰을 줬다.</p> <blockquote> <p>“이걸 만들면 전부가 바뀐다”`</p> </blockquote> <p>라는 생각이 나의 흥미를 자극한다는 것이다.</p> <p>그리고 하나 더, 개인적으로는 이 2가지의 연결하는 사람이 되고 싶은 것이다.</p> <p>결국 하나만으로는 최적화가 될 수 없다는 거를 현재 기업들의 채용 흐름을 보고 느끼고 있다. 다양한 cloud service 기업들이 hardware designer들을 채용하는 것은, 엔비디아에 비해 성능은 좋지 않더라도 자신들의 서비스에 맞는 칩을 자체적을소 파운드리를 통해서 생산하는 것의 경재성을 깨달았기 때문이다.</p> <p>이러한 관점에서 나에게 24년도 상반기 정보대학에서 강의해주신 NAVER Cloud 이동수 이사님은 내가 원하는 공학자의 삶을 걸어오고 계셨다. 그리고 나는 그런 엔지니어가 되기 위한 방법을 모색하고 있는지도 모른다.</p> <hr/> <p>하지만 현재 시점에서는 사실 하나를 집중해서 하고 그 다음에 물 흐르듯이 분야를 넓혀가는 시야를 가지는게 맞다는 생각이다.</p> <p>그 집중할 분야를 고르는데 생각이 많이지고 있고, 어떻게 보면 하드웨어가 맞는 생각이라는 걸 알면서도 SW architect에 대한 흥미를 외면할 수 없는 것 같다.</p>]]></content><author><name></name></author><category term="me"/><category term="myself"/><summary type="html"><![CDATA[Thinking about my interests]]></summary></entry><entry><title type="html">Jetson Nano Dev Log</title><link href="https://dudududukim.github.io/blog/2025/jetson-nano-dev-log/" rel="alternate" type="text/html" title="Jetson Nano Dev Log"/><published>2025-06-30T13:57:47+00:00</published><updated>2025-06-30T13:57:47+00:00</updated><id>https://dudududukim.github.io/blog/2025/jetson-nano-dev-log</id><content type="html" xml:base="https://dudududukim.github.io/blog/2025/jetson-nano-dev-log/"><![CDATA[<p><a href="https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#intro">Get Started with Jetson Nano Developer Kit</a></p> <hr/> <h3 id="install-os-to-jetson-nano">Install OS to jetson Nano</h3> <p>as my device(jetson nano) has no sd card slot, i need to install with the SDK. Jetson as internal eMMC 16GB for installing the os <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion">VMware Fusion</a></p> <hr/> <h3 id="1-jetson-nano-sdk-manager">1. Jetson Nano SDK manager</h3> <p>OS booting with Jetpack 4.x</p> <p>There exist specific ubuntu version (16 or 18) to install jetpack 4.6.</p> <p>And wifi ac9260 card is not suit for Jetpack 4.x.</p> <hr/> <h3 id="2-vnc-server-setting">2. VNC server setting</h3> <p>https://developer.nvidia.com/embedded/learn/tutorials/vnc-setup</p> <p>Not similar with rasberrypi which deals vnc server with GUI.</p> <p>Nvidia official provides the site to figure out vnc server setting.</p> <hr/> <h3 id="3-following-hello-ai-world-course">3. Following “Hello AI World” course</h3> <p>https://github.com/dusty-nv/jetson-inference/blob/master/docs/aux-docker.md</p> <p>cloning and downloading docker file</p> <hr/> <h3 id="4-object-detection-and-image-classification">4. object detection and image classification</h3> <p>In Object detection, you could use temporal base column filtering in real world application.</p> <p>Detection Dataset : <a href="https://storage.googleapis.com/openimages/web/visualizer/index.html?set=train&amp;type=detection&amp;c=%2Fm%2F0fp6w">OpenImagesDataset</a></p> <hr/> <h3 id="5-using-pre-defined-jetsoninference-package">5. Using Pre-defined jetson.inference package</h3> <p>After building the c++ and binding it with python, we can use c++ code in python function.</p> <p>Which means we can inference with TensorRT optimized model computation.</p> <p>So we need to make build with following guide <a href="https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo.md">Building the Project from Source</a></p> <p>(samsung notebook)</p> <hr/> <h3 id="1-what-does-build-do">1. What does build do?</h3> <p>내가 코드및시스템최적화 수업에서 build를 한적이 있다.</p> <p>c++코드의 loop tiling, simd, urolling 등 기법을 적용하고 torch build를 했었다.</p> <p>역할은 C++ 라이브러리를 컴파일하고, 컴파일된 오브젝트 파일을 TensorRT나 CUDA 라이브러리와 링크해 가속 추론이 가능한 실행 파일과 라이브러리를 생성하며, C++ 코드를 Python에서 사용할 수 있도록 바인딩 파일을 만들고, 필요한 의존성을 자동으로 점검한다.</p> <p>https://github.com/jugfk/installVSCode</p> <p>https://code.visualstudio.com/updates/v1_85</p> <p>https://binl.tistory.com/entry/SK-Telecom-%EA%B3%B5%EC%9C%A0%EA%B8%B0-%ED%8F%AC%ED%8A%B8%ED%8F%AC%EC%9B%8C%EB%94%A9-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-2023%EB%85%84-5%EC%9B%94</p> <p>할루시네이션 ufw port에 22를 넣어야하는데 서비스포트넣으라고 해서 한참 또 해멤…..</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/jetson1-480.webp 480w,/assets/img/jetson1-800.webp 800w,/assets/img/jetson1-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/jetson1.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> <blockquote> <p>Mission CLEAR!</p> </blockquote> <hr/> <h3 id="2-labeling-detection-for-뚱땅이">2. Labeling detection for 뚱땅이</h3> <p>My projects’ two main goal is to track 뚱땅이 loaction and sound.</p> <p>Since when our family get out of home, 뚱땅이 starts to bark and it’s a now big problem for my family.</p> <p>So firstly, designing the monitoring tool with jetson nano, and adding functional actinos to stabilize 뚱땅이.</p> <p>Using open source tool <a href="https://github.com/HumanSignal/labelImg?tab=readme-ov-file">LabelImg</a> to annotate my own dataset.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install labelImg
 labelImg
 labelImg [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
 </code></pre></div></div> <p>https://github.com/HumanSignal/awesome-data-labeling</p> <p>그냥 미친앱 = https://rectlabel.com/</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/jetson/annotation-480.webp 480w,/assets/img/jetson/annotation-800.webp 800w,/assets/img/jetson/annotation-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/jetson/annotation.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> <p>mac에서 제공하는 core ML 모델까지 활용해서 auto labeling을 실행함</p> <p>https://developer.apple.com/machine-learning/models/</p> <h3 id="3-labeling-finished">3. labeling finished</h3> <p>대략 1800개의 이미지를 뚱땅이에 대해서 labeling 완료함</p> <h3 id="4-model-architecture-change">4. model architecture change</h3> <p>YOLOv11n or YOLOv11s</p> <h3 id="5-ultralytics">5. ultralytics</h3> <p>ultralytics provides convinient tools and package to train test yolo models.</p> <p>https://docs.ultralytics.com/modes/train/#resuming-interrupted-trainings</p> <p>https://docs.ultralytics.com/integrations/onnx/#onnx-and-onnx-runtime</p> <h3 id="6-nvonnxparserh-를-활용한-onnx-tensorrt-변환">6. nvonnxparser.h 를 활용한 onnx tensorRT 변환</h3> <details><summary>Working code</summary> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;opencv2/opencv.hpp&gt;</span><span class="cp">
@@ -404,7 +404,260 @@ Round-trip time: 13.3266 ms
         <span class="n">send_serial</span><span class="p">(</span><span class="n">command</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div> <hr/> <h1 id="header-file의-중요성">header file의 중요성</h1> <ul> <li>forward declaratoin</li> <li>extern 설정 (전역변수)</li> <li>cuda code c linkage</li> <li>Header Guard</li> </ul> <blockquote> <p>Header defines “What” / CPP defines “How”</p> </blockquote> <p>Tips : header guard를 사용하면, 동일 header file의 recursive하게 여러번 포함되더라도 컴파일 오류를 발생시키지 않음</p>]]></content><author><name></name></author><category term="work"/><category term="jetson"/><category term="log"/><summary type="html"><![CDATA[Jetson Nano object Tracking Dev Logs]]></summary></entry><entry><title type="html">Cursor &amp;amp; Lovable</title><link href="https://dudududukim.github.io/blog/2025/lovable_curosr/" rel="alternate" type="text/html" title="Cursor &amp;amp; Lovable"/><published>2025-05-20T08:52:04+00:00</published><updated>2025-05-20T08:52:04+00:00</updated><id>https://dudududukim.github.io/blog/2025/lovable_curosr</id><content type="html" xml:base="https://dudududukim.github.io/blog/2025/lovable_curosr/"><![CDATA[<p>vibe debugging</p> <p>lovable = infa까지 처리해줌</p> <p>하이브리드 어플리케이션 (MVP + 1단계)</p> <p>IA/FSD -&gt; web_app 개발시 기획</p> <h2 id="1-관심사">1. 관심사</h2> <p>필름사진, 여행, 대학원, 나에게 맞는 분야를 찾는게 힘들더라, 내 전공을 버리고 다른 분야를 가도 되는가?(상담) 나의 관심사를 지속적으로 트랙해주고 정리해주면 좋겠어.</p> <h2 id="2-웹앱-아이디어-구상">2. 웹앱 아이디어 구상</h2> <h2 id="3-메인기능-구상">3. 메인기능 구상</h2> <h2 id="4-유저의-행동-상상">4. 유저의 행동 상상</h2> <h2 id="5-세계관-상상">5. 세계관 상상</h2> <역할> 너는 바이브코딩 프로젝트를 만드는 기획자야. 내 입력을 참고하되, 이것에 국한되지 않게 내용을 보충해서 기획서를 만들어. <포함해> 사이트맵, 사이트별 핵심기능, 사이트별 UI 구성, 데이터명세, 디자인가이드, … <포함하지마> 기술스택 명세, 코드, 향후고려사항, 너무 상세한 기술명세 <개발스테이지> 단계별로 개발스테이지를 나눠서 개발하도록 해. Stage 는 3개로 만들어.각 단계에서 작동 가능하게 해줘. - 1단계: 초반에는 프론트 먼저 만들고, 백엔드 없이도 동작 하게 해줘. - 2단계: REST API 방식의 백엔드를 모두 구현해줘. - 3단계: 실시간 관련 동작을 모두 구현해줘. <출력> 결과는 마크다운(md) 형식으로 줘. 표 사용하지 마. Canvas 로 보여줘. <웹앱의 목표=""> 지금 나의 전공 적합도를 점수로 나타내는 사이트. 접속 시 전공, 학교, 성별 등을 넣어서 해당 전공별 문항을 기준에 맞춰서 llm이 선정하고 사용자가 답변을 주면 점수를 메겨줌. 질문에는 다른 분야로의 관심사가 있는지 기본 질문들(적성검사 등)도 랜덤하게 섞어서 제공. 포션은 사용자가 더 바꾸고 싶은 마음이 높을 수록 기본 질문들을 더 제공함. types 처럼 재미요소를 챙길 수도 진지하게 자신의 진로를 고민할 수도 있는 계기를 제공함. 간단한 검사 이후에는 상담을 신청할 수도 있게. <메인기능> 자신의 답변을 바탕으로 한줄 요약을 생성하고, 해당 요약으로 png 캐릭터를 출력. 주기적으로 질문을 업데이트하면서 사용자의 관심사를 tracking 가능. 누적된 데이터를 바탕으로 사용자에 더 fit한 정보를 제공할 수 있음. 결국 자신의 페이지까지 연결되면 좋겠음. 아니면 차라리 홈페이지를 설문을 통해서 제공하는것도 낫베드. 일시적으로 자신의 domain을 부여해서 공유할 수 있도록. 다양한 검사의 결과를 자신의 페이지에 나열. <유저흐름> 첫 페이지는 무조건 로그인, 계정 연결로그인. 아이디 기반으로 자신의 친구들도 추가 가능. 각 페이지에는 각 친구들이 검사한 결과가 정리되어 있음. 나의 경우에는 로그인 시에 treding 검사가 가장 먼저 뜸. 일단 전공 부적합도 검사를 default로 해서 파생 검사들을 연결(llm이 계속해서 자체적으로 검사지를 생성함) 전공으로 시작된 자신의 사이트가 결국 자신의 진정한 관심사를 탐구하고, 지인들과 공유하고 트랙할 수 있는 사이트. <고려사항> 룩? 그냥 사용자의 이름을 최상단에 띄우고, 메인 화면에 자신과 같은 전공 거리감을 가지거나, 관심사를 공유하는 친구들이 보여짐. 클릭하면 해당 친구의 사이트로 이동. 검사 결과들이 보이고, 시간 순으로 gpt가 재미나게 이야기를 정리해두었음. 위아래 스크롤이 아니라 양옆 스크롤 -&gt; 꽤나 구체적이여야 하고, 아이디어 자체의 구체화가 단계를 거듭하면서 더 새로운 아이디어가 결합됨. ## 강화프롬프트(강의제공) &gt; <역할> 너는 바이브코딩 프로젝트를 만드는 기획자야. 내 입력을 참고하되, 이것에 국한되지 않게 내용을 보충해서 기획서를 만들어. <포함해> 사이트맵, 사이트별 핵심기능, 사이트별 UI 구성, 데이터명세, 디자인가이드, … <포함하지마> 기술스택 명세, 코드, 향후고려사항, 너무 상세한 기술명세 <개발스테이지> 단계별로 개발스테이지를 나눠서 개발하도록 해. Stage 는 3개로 만들어.각 단계에서 작동 가능하게 해줘. - 1단계: 초반에는 프론트 먼저 만들고, 백엔드 없이도 동작 하게 해줘. - 2단계: REST API 방식의 백엔드를 모두 구현해줘. - 3단계: 실시간 관련 동작을 모두 구현해줘. <출력> 결과는 마크다운(md) 형식으로 줘. 표 사용하지 마. Canvas 로 보여줘. # GPT 이성 출력 결과 ## 🎯 프로젝트 개요 * **서비스명**: 바이브코딩 * **목표**: 사용자의 전공 적합도를 측정하고, LLM 기반의 dynamic questionnaire를 통해 진로 탐색과 친구들과의 공유/트래킹 기능을 제공 * **핵심 Flow**: 로그인 → 기본 검사(전공 적합도) → 답변 기반 추천 및 요약 생성 → PNG 캐릭터 생성 → 추가 검사/상담 신청 → 개인 도메인 공유 --- ## 🚀 Development Stages ### Stage 1: Front-end Only * **목표**: 백엔드 없이도 동작 가능한 프로토타입 구현 * **기능**: * 로그인/Sign-in 화면 (+ OAuth 연결) * Questionnaire UI (dynamic question render via mock data) * 답변 입력 및 요약 생성(Mock LLM API 호출) * PNG 캐릭터 display (mock image URL) * 친구 리스트 스크롤 UI (side-scroll) ### Stage 2: REST API Backend * **목표**: 모든 UI 요소에 실제 REST API 연동 * **기능**: * User Auth API (sign-up, sign-in, session) * Questionnaire API (fetch questions, submit answers) * LLM Summary API (실제 GPT 호출) * Image Generation API (PNG 캐릭터 생성) * User Data CRUD API (프로필, 친구, 검사 결과) ### Stage 3: Real-time Features * **목표**: WebSocket/Realtime 연동으로 즉각적인 피드백 및 친구 추적 * **기능**: * Real-time questionnaire progress tracking (Socket.io) * Live feed: 친구들의 검사 시작/완료 알림 * 채팅/상담 신청 실시간 알림 --- ## 🗺️ Sitemap * **/login** * **/dashboard** * Trending Tests * My Major Fit Test * 친구 피드 (side-scroll) * **/test/\:id** * Question 화면 * 실시간 Progress Bar * **/result/\:id** * Summary &amp; PNG Character * Recommend Tests &amp; 상담 신청 * **/profile/\:username** * 개인 결과 &amp; 공유 도메인 * Test history timeline --- ## 💡 Site별 핵심 기능 ### Login Page * OAuth social sign-in * Traditional email/password ### Dashboard * Trending Tests list * My Major Fit Test Quick Start * Friends Carousel (side-scroll) ### Test Page * Dynamic Questionnaire (LLM-driven) * 기본 vs 관심사 기반 question mix * 실시간 progress ### Result Page * One-line summary (LLM) * PNG Character display * 상담 신청 버튼 ### Profile Page * Personal Test History timeline * Domain sharing link --- ## 🎨 UI 구성 * **Color Scheme**: soft pastel base (light backgrounds), accent color for CTAs * **Typography**: Headlines: 2xl, Body: base, Buttons: lg * **Layout**: * Side-scroll carousel for 친구 * Center card for questionnaire * Bottom-fixed CTA bar on mobile * Responsive design (Flex, Grid) --- ## 🗂️ Data Specification * **User**: id, name, email, gender, major, school, domain * **Test**: id, title, description, category, questions\[] * **Question**: id, prompt, type, options\[], weight * **Answer**: userId, questionId, response, timestamp * **Result**: userId, testId, score, summary, characterUrl, timestamp * **FriendLink**: userId, friendId, sharedDomain --- ## 🎨 Design Guide * **Logo &amp; Branding**: Simple vibey icon + logotype * **Iconography**: flat, rounded SVG icons * **Button**: 2xl rounded corners, shadow, hover transition * **Interaction**: smooth animation (Framer Motion suggestion) * **Spacing**: padding p-4 이상, margin m-4 * **Emotion**: 😉 friendly tone, playful UI 요소 mix &gt; *기술적 용어는 영어로 표기했습니다. 이모지를 적절히 사용하여 기획서를 밝고 기분 좋게 구성했어요!* # Lovable 사용하기 [운동소모임 앱] (운동 소모임 앱) <역할> 너는 바이브코딩 프로젝트를 만드는 기획자야. 내 입력을 참고하되, 이것에 국한되지 않게 내용을 보충해서 기획서를 만들어. <포함해> 사이트맵, 사이트별 핵심기능, 사이트별 UI 구성, 데이터명세, 디자인가이드, … <포함하지마> 기술스택 명세, 코드, 향후고려사항, 너무 상세한 기술명세 <개발스테이지> 단계별로 개발스테이지를 나눠서 개발하도록 해. Stage 는 3개로 만들어.각 단계에서 작동 가능하게 해줘. - 1단계: 초반에는 프론트 먼저 만들고, 백엔드 없이도 동작 하게 해줘. - 2단계: REST API 방식의 백엔드를 모두 구현해줘. - 3단계: 실시간 관련 동작을 모두 구현해줘. <출력> 결과는 마크다운(md) 형식으로 줘. 표 사용하지 마. spec.md 파일로 다운받을 파일을 줘. (이하 요구사항) <웹앱 목표=""> 소모임 어플을 만들자. 사람들을 소모임으로 연결시키자. <핵심기능 구상=""> 핵심기능은 모임방이야. 유저들이 메인페이지에서 모임방을 직접 만들 수 있게 할거야. 유저들은 모임방에서 모임방에서 채팅도 하고, 참석/참석취소 를 할 수 있어. <유저흐름 구상=""> 랜딩페이지(대기실): 모임방의 리스트를 볼 수 있음. 카테고리로 필터링 가능. 모임방 이름으로 검색 가능. 모임방의 타이틀, 날짜, 시간, 카테고리, 현재 참석인원 숫자, 최대인원 숫자, 모임장이름 모임방 만들기: 대기실의 '모임방 만들기' 를 클릭해서 모임방 만드는 페이지로 가. 모임방을 만들 때 타이틀, 날짜, 시간, 카테고리, 최대인원 등을 설정해야해. 모임방을 만든 사람은 모임장이 되고, 모임장만 내용을 수정할 수 있어. 모임방 들어가기: 유저는 메인페이지의 모임방을 클릭하고 들어갈거야. 모임방에 들어가면 모임방에 들어온 사람들과 실시간 채팅이 가능해야하고, 모임에 참석할 사람들의 리스트를 확인할 수 있어야 해. 모임방에 참석/참석취소를 할 수 있게 할거야. <고려사항> 로그인: 대기실에서 모임방 리스트는 로그인 안해도 보여야하고, 모임방을 생성하거나 들어갈 땐 로그인 해야해. 유저는 가입할 때 닉네임을 설정해야해. 카테고리: 운동소모임 어플이니까, 카테고리는 러닝/테니스/농구/축구/탁구 등 으로 해줘. 룩&amp;필: 운동소모임 어플이니까, sporty 하게 black &amp; blue 계열을 쓰고 운동관련 이미지&amp;이모지를 넣어줘. 어플이름: Enthes(enjoy the squash) ## lovable용 heading script &gt; 아래 입력내용을 root 폴더의 spec.md 에 저장해. spec.md 를 읽고 어떻게 개발 할 지 생각해. 너는 언제나 spec.md 파일을 읽고 개발을 할거야. Stage 1을 모두 개발해봐. spec.md ``` ``` </고려사항></유저흐름></핵심기능></웹앱></출력></개발스테이지></포함하지마></포함해></역할></출력></개발스테이지></포함하지마></포함해></역할></고려사항></유저흐름></메인기능></웹앱의></출력></개발스테이지></포함하지마></포함해></역할>]]></content><author><name></name></author><category term="work"/><category term="work"/><category term="web"/><summary type="html"><![CDATA[AI agent-powered development workflow using Lovable for automated web application development.]]></summary></entry><entry><title type="html">Best Practices for PyTorch Training</title><link href="https://dudududukim.github.io/blog/2025/good_code_for_pytorch-copy/" rel="alternate" type="text/html" title="Best Practices for PyTorch Training"/><published>2025-04-21T00:26:47+00:00</published><updated>2025-04-21T00:26:47+00:00</updated><id>https://dudududukim.github.io/blog/2025/good_code_for_pytorch%20copy</id><content type="html" xml:base="https://dudududukim.github.io/blog/2025/good_code_for_pytorch-copy/"><![CDATA[<div align="left"> <sub> Summurized by <i>Duhyeon Kim</i> w/o LLMs</sub> <br/> <br/> </div> <h3 id="naming-convention">Naming Convention</h3> <table> <thead> <tr> <th>Type</th> <th>Convention</th> <th>Example</th> </tr> </thead> <tbody> <tr> <td><code class="language-plaintext highlighter-rouge">Packages &amp; Modules</code></td> <td>lower_with_under</td> <td>from <strong>prefetch_generator</strong> import BackgroundGenerator</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">Classes</code></td> <td>CapWords</td> <td>class <strong>DataLoader</strong></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">Constants</code></td> <td>CAPS_WITH_UNDER</td> <td><strong>BATCH_SIZE=16</strong></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">Instances</code></td> <td>lower_with_under</td> <td><strong>dataset</strong> = Dataset</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">Methods &amp; Functions</code></td> <td>lower_with_under()</td> <td>def <strong>visualize_tensor()</strong></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">Variables</code></td> <td>lower_with_under</td> <td><strong>background_color=’Blue’</strong></td> </tr> </tbody> </table> <p><br/>👍 해당 github에서 말하는 내용을 내가 격어왔다는 점은 꽤나 흥미로웠다<br/>(특히 jupyter notebook으로 다양하게 실험하고, python script로 넘어와서 train deploy 수준의 reproducibility를 높였다는 점)</p> <hr/> <h3 id="commonly-used-libraries">Commonly used libraries:</h3> <table> <thead> <tr> <th>Name</th> <th>Description</th> <th>Used for</th> </tr> </thead> <tbody> <tr> <td><a href="https://pytorch.org/">torch</a></td> <td>Base Framework for working with neural networks</td> <td>creating tensors, networks and training them using backprop</td> </tr> <tr> <td><a href="https://pytorch.org/docs/stable/torchvision">torchvision</a></td> <td>PyTorch <strong>computer vision</strong> modules</td> <td>image data preprocessing, augmentation, postprocessing</td> </tr> <tr> <td><a href="https://pillow.readthedocs.io/en/stable/">Pillow (PIL)</a></td> <td>Python Imaging Library</td> <td>Loading images and storing them</td> </tr> <tr> <td><a href="https://www.numpy.org/">Numpy</a></td> <td>Package for <strong>scientific computing</strong> with Python</td> <td>Data preprocessing &amp; postprocessing</td> </tr> <tr> <td><a href="https://pypi.org/project/prefetch_generator/">prefetch_generator</a></td> <td>Library for background processing</td> <td><strong>Loading next batch</strong> in background during computation</td> </tr> <tr> <td><a href="https://github.com/tqdm/tqdm">tqdm</a></td> <td><strong>Progress bar</strong></td> <td>Progress during training of each epoch</td> </tr> <tr> <td><a href="https://github.com/TylerYep/torchinfo">torchinfo</a></td> <td>Print Keras-like model summary for PyTorch</td> <td><strong>Displays network</strong>, it’s parameters and sizes at each layer</td> </tr> <tr> <td><a href="https://pytorch.org/docs/stable/tensorboard.html">torch.utils.tensorboard</a></td> <td><strong>Tensorboard</strong> within PyTorch</td> <td>Logging experiments and showing them in tensorboard</td> </tr> </tbody> </table> <p><br/>🧐 prefetch_generator 빼고는 다 씀 (생산성 및 학습 안정성을 위해서), prefetch_generator를 사용해보아야 겠다.</p> <hr/> <h3 id="file-organization">File organization</h3> <ul> <li>layer, losses, ops 와 같이 분리해 두고</li> <li>Main model은 model_name.py로 파일을 설정한다.</li> </ul> <p>Finally trainiing and test code imports only the final model_name.py module</p> <hr/> <h3 id="building-nn">Building NN</h3> <p>Loss function도 nn.Module로 해서 computation graph에 자연스럽게 녹아들도록 설계한다.</p> <p>torchviz를 활용한 computation graph visualization</p> <p><img src="https://dudududukim.github.io/assets/img/comput_graph.png" alt="설명" height="400"/></p> <p>Vgg perceptual loss 같은 경우에, pretrained model의 .feature 을 불러와서 각 silce nn.Sequential module에 .add_module을 이용해서 for문으로 모델을 분리한다. 또한 requires_grad=False로 model을 freeze한다.</p> <hr/> <h3 id="train-code-structure">Train Code Structure</h3> <div style="border: 1px solid var(--global-theme-color-light); padding: 1em; border-radius: 4px; background-color: var(--global-theme-bg);"> <p><strong>Import</strong><br/> <strong>seed</strong></p> <p><strong>(Main)</strong><br/>     ㄴ argparse<br/>     ㄴ dataset transform<br/>     ㄴ dataset / dataloader<br/>     ㄴ instantiate network<br/>     ㄴ create loss<br/>     ㄴ device setting (cuda, mps)<br/>     ㄴ create optimizer<br/>     ㄴ load checkpoint if needed<br/>     ㄴ create tensorboard writer</p> <p><strong>(Main Loop)</strong><br/>     ㄴ Set model to train mode<br/>     ㄴ Use prefetch_generator and tqdm to iterate through data</p> <p>    ㄴ Forward / backward (zero_grad, backward, step)<br/>     ㄴ Update writer<br/>     ㄴ Compute computation time and <strong>compute_efficiency</strong><br/>     ㄴ Test code (optional)<br/>     ㄴ Save checkpoint (if needed)</p> </div> <blockquote> <p><strong>Tip:</strong> It is very good practice to track both preparation time and computation time using tqdm to detect any issues in your dataloader.</p> </blockquote> <p><strong>적용해 볼 점 :</strong></p> <ol> <li>data_prefetcher</li> <li>data loading time과 computation time을 분석해서 computation efficiency check할 것</li> </ol> <p>아래는 요청하신 내용을 <em>가독성</em> 있게 <strong>kramdown</strong> 형식으로 재구성한 버전입니다.<br/> <code class="language-plaintext highlighter-rouge">text</code>와 <em>text</em>를 적극적으로 활용했고, 원래의 의미와 내용은 그대로 유지했습니다.</p> <hr/> <h3 id="dos-and-donts">Do’s and Don’t’s</h3> <h5 id="x-donts">:x: Don’ts</h5> <ul> <li> <p><strong>Avoid using <code class="language-plaintext highlighter-rouge">numpy</code> in the <code class="language-plaintext highlighter-rouge">forward</code> method</strong> of <code class="language-plaintext highlighter-rouge">nn.Module</code><br/> <em>Numpy runs on CPU only. PyTorch supports most numpy functions, so use torch equivalents for GPU compatibility!</em></p> </li> <li> <p><strong>Don’t log results in every step</strong><br/> <em>Typically, models train for thousands of steps. Logging loss and results every <code class="language-plaintext highlighter-rouge">n</code>th step is enough to reduce overhead.</em><br/> <em>Especially, saving intermediate results as images can be costly during training.</em></p> </li> </ul> <h5 id="white_check_mark-dos">:white_check_mark: Do’s</h5> <ul> <li> <p><strong>Use command-line arguments</strong><br/> <em>You can track training arguments by using</em> f.write(opt.<strong>str</strong>()) <em>to save them.</em></p> </li> <li> <p><strong>Use <code class="language-plaintext highlighter-rouge">.detach()</code> to free tensors from the computation graph</strong><br/> <em>If you don’t need gradients, detach tensors to save memory and computation.</em></p> </li> <li> <p><strong>Use <code class="language-plaintext highlighter-rouge">.item()</code> when printing scalar tensors</strong><br/> <em>This converts a single-value tensor to a standard Python number for easier printing.</em></p> </li> <li> <p><strong>Use the <code class="language-plaintext highlighter-rouge">__call__</code> method instead of <code class="language-plaintext highlighter-rouge">forward</code> on a <code class="language-plaintext highlighter-rouge">nn.Module</code></strong><br/> <em>Calling the module directly (e.g., <code class="language-plaintext highlighter-rouge">model(input)</code>) is preferred over explicitly calling <code class="language-plaintext highlighter-rouge">model.forward(input)</code>.</em></p> </li> </ul> <hr/> <h3 id="soso-tips">soso Tips</h3> <p>We can use virtual batch (accumulating grad and updating on virtual batch size)</p> <hr/> <h3 id="references-">References :</h3> <p><a href="https://peps.python.org/pep-0008/">PEP 8 – Style Guide for Python Code</a><br/> <a href="https://github.com/IgorSusmelj/pytorch-styleguide">A PyTorch Tools, best practices &amp; Styleguide</a><br/> <a href="https://bnikolic.co.uk/blog/pytorch-detach.html">Pytorch .detach()</a><br/> <a href="https://github.com/google/styleguide/blob/gh-pages/pyguide.md">Google pyguide</a></p>]]></content><author><name></name></author><category term="programming"/><category term="pytorch"/><category term="ML"/><summary type="html"><![CDATA[Clean, efficient PyTorch code conventions, libraries, structure, best practices.]]></summary></entry><entry><title type="html">Tips to write blog .md</title><link href="https://dudududukim.github.io/blog/2025/key_features_of_blog/" rel="alternate" type="text/html" title="Tips to write blog .md"/><published>2025-04-19T06:47:00+00:00</published><updated>2025-04-19T06:47:00+00:00</updated><id>https://dudududukim.github.io/blog/2025/key_features_of_blog</id><content type="html" xml:base="https://dudududukim.github.io/blog/2025/key_features_of_blog/"><![CDATA[<h2 id="introduction">Introduction</h2> <p>This blog post highlights the key features of to write the posts markdwon.</p> <h2 id="tips">Tips</h2> <h3 id="tabs-for-something-else"><br/>Tabs for something else</h3> <p>! You should have <code class="language-plaintext highlighter-rouge">tabs: true</code> in the YAML front matter.</p> <ul id="something-else" class="tab" data-tab="d9231f2d-8da7-4662-9655-ef114e3886ae" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="d9231f2d-8da7-4662-9655-ef114e3886ae" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul> <h3 id="post-with-citation"><br/>post with citation</h3> <p>If you place <code class="language-plaintext highlighter-rouge">citation: true</code> in the YAML front matter, it displays the citation reference in the below of the post.</p> <h3 id="image-with-fancy-options"><br/>Image with fancy options</h3> <p>You can check the forms in the <a href="/blog/2024/advanced-images/">Advanced Image</a>.</p> <p>You should place the key options in the YAML front matter, too!</p> <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">images</span><span class="pi">:</span>
+</code></pre></div></div> <hr/> <h1 id="header-file의-중요성">header file의 중요성</h1> <ul> <li>forward declaratoin</li> <li>extern 설정 (전역변수)</li> <li>cuda code c linkage</li> <li>Header Guard</li> </ul> <blockquote> <p>Header defines “What” / CPP defines “How”</p> </blockquote> <p>Tips : header guard를 사용하면, 동일 header file의 recursive하게 여러번 포함되더라도 컴파일 오류를 발생시키지 않음</p>]]></content><author><name></name></author><category term="work"/><category term="jetson"/><category term="log"/><summary type="html"><![CDATA[Jetson Nano object Tracking Dev Logs]]></summary></entry><entry><title type="html">Cursor &amp;amp; Lovable</title><link href="https://dudududukim.github.io/blog/2025/lovable_curosr/" rel="alternate" type="text/html" title="Cursor &amp;amp; Lovable"/><published>2025-05-20T08:52:04+00:00</published><updated>2025-05-20T08:52:04+00:00</updated><id>https://dudududukim.github.io/blog/2025/lovable_curosr</id><content type="html" xml:base="https://dudududukim.github.io/blog/2025/lovable_curosr/"><![CDATA[<h2 id="vibe-debugging">vibe debugging</h2> <p>lovable = infa까지 처리해줌</p> <p>하이브리드 어플리케이션 (MVP + 1단계)</p> <p>IA/FSD → 웹앱 개발 시 기획</p> <h3 id="1-관심사">1. 관심사</h3> <ul> <li>필름사진, 여행, 대학원</li> <li>나에게 맞는 분야를 찾는 게 힘들다. 내 전공을 버리고 다른 분야로 가도 되는가? (상담)</li> <li>나의 관심사를 지속적으로 트래킹하고 정리해주는 기능이 필요함</li> </ul> <h3 id="2-웹앱-아이디어-구상">2. 웹앱 아이디어 구상</h3> <ul> <li>사용자의 전공, 학교, 성별 등 기본 정보 입력</li> <li>LLM이 전공별 맞춤 질문을 선정, 사용자는 답변을 입력</li> <li>적성검사 등 다양한 분야의 질문을 랜덤하게 제공</li> <li>사용자가 더 많은 질문을 원할 때 기본 질문 추가</li> <li>진지한 진로 고민과 재미 요소(types) 모두 제공</li> </ul> <h3 id="3-메인기능-구상">3. 메인기능 구상</h3> <ul> <li>답변 기반 한줄 요약 생성 및 PNG 캐릭터 출력</li> <li>질문 주기적 업데이트, 관심사 트래킹</li> <li>누적 데이터로 맞춤 정보 제공</li> <li>개인 페이지 연결 및 설문 결과 공유</li> <li>자신의 도메인 생성, 검사 결과 나열</li> </ul> <h3 id="4-유저의-행동-상상">4. 유저의 행동 상상</h3> <ul> <li>첫 페이지: 로그인 및 계정 연결</li> <li>친구 추가, 친구의 검사 결과 확인</li> <li>로그인 시 trending 검사 우선 노출</li> <li>전공 부적합도 검사 default, 파생 검사 연결</li> <li>자신의 사이트에서 진정한 관심사 탐구, 지인과 공유 및 트래킹</li> </ul> <h3 id="5-세계관-상상">5. 세계관 상상</h3> <ul> <li>메인 화면 상단에 사용자 이름 표시</li> <li>같은 전공 거리감/관심사 공유 친구 노출, 클릭 시 친구 사이트 이동</li> <li>검사 결과와 GPT 기반 이야기 시간순 정리</li> <li>좌우 스크롤 방식 UI</li> <li>단계별 구체화로 새로운 아이디어 결합</li> </ul> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;역할&gt;
+너는 바이브코딩 프로젝트를 만드는 기획자야.
+내 입력을 참고하되, 이것에 국한되지 않게 내용을 보충해서 기획서를 만들어.
+
+&lt;포함해&gt; 사이트맵, 사이트별 핵심기능, 사이트별 UI 구성, 데이터명세, 디자인가이드, …
+&lt;포함하지마&gt; 기술스택 명세, 코드, 향후고려사항, 너무 상세한 기술명세
+
+&lt;개발스테이지&gt;
+단계별로 개발스테이지를 나눠서 개발하도록 해. Stage 는 3개로 만들어.각 단계에서 작동 가능하게 해줘.
+- 1단계: 초반에는 프론트 먼저 만들고, 백엔드 없이도 동작 하게 해줘.
+- 2단계: REST API 방식의 백엔드를 모두 구현해줘.
+- 3단계: 실시간 관련 동작을 모두 구현해줘.
+
+&lt;출력&gt;
+결과는 마크다운(md) 형식으로 줘. 표 사용하지 마. Canvas 로 보여줘.
+
+
+&lt;웹앱의 목표&gt;
+지금 나의 전공 적합도를 점수로 나타내는 사이트.
+접속 시 전공, 학교, 성별 등을 넣어서 해당 전공별 문항을 기준에 맞춰서 llm이 선정하고 사용자가 답변을 주면 점수를 메겨줌.
+질문에는 다른 분야로의 관심사가 있는지 기본 질문들(적성검사 등)도 랜덤하게 섞어서 제공.
+포션은 사용자가 더 바꾸고 싶은 마음이 높을 수록 기본 질문들을 더 제공함.
+types 처럼 재미요소를 챙길 수도 진지하게 자신의 진로를 고민할 수도 있는 계기를 제공함.
+
+간단한 검사 이후에는 상담을 신청할 수도 있게.
+
+
+&lt;메인기능&gt;
+자신의 답변을 바탕으로 한줄 요약을 생성하고, 해당 요약으로 png 캐릭터를 출력.
+주기적으로 질문을 업데이트하면서 사용자의 관심사를 tracking 가능.
+누적된 데이터를 바탕으로 사용자에 더 fit한 정보를 제공할 수 있음.
+결국 자신의 페이지까지 연결되면 좋겠음.
+아니면 차라리 홈페이지를 설문을 통해서 제공하는것도 낫베드. 일시적으로 자신의 domain을 부여해서 공유할 수 있도록.
+다양한 검사의 결과를 자신의 페이지에 나열.
+
+
+&lt;유저흐름&gt;
+첫 페이지는 무조건 로그인, 계정 연결로그인.
+
+아이디 기반으로 자신의 친구들도 추가 가능. 각 페이지에는 각 친구들이 검사한 결과가 정리되어 있음.
+나의 경우에는 로그인 시에 treding 검사가 가장 먼저 뜸. 일단 전공 부적합도 검사를 default로 해서 파생 검사들을 연결(llm이 계속해서 자체적으로 검사지를 생성함)
+전공으로 시작된 자신의 사이트가 결국 자신의 진정한 관심사를 탐구하고, 지인들과 공유하고 트랙할 수 있는 사이트.
+
+
+&lt;고려사항&gt;
+룩? 그냥 사용자의 이름을 최상단에 띄우고, 메인 화면에 자신과 같은 전공 거리감을 가지거나, 관심사를 공유하는 친구들이 보여짐.
+클릭하면 해당 친구의 사이트로 이동. 검사 결과들이 보이고, 시간 순으로 gpt가 재미나게 이야기를 정리해두었음.
+위아래 스크롤이 아니라 양옆 스크롤
+</code></pre></div></div> <blockquote> <p>꽤나 구체적이여야 하고, 아이디어 자체의 구체화가 단계를 거듭하면서 더 새로운 아이디어가 결합됨.</p> </blockquote> <h2 id="강화프롬프트강의제공">강화프롬프트(강의제공)</h2> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;역할&gt;
+너는 바이브코딩 프로젝트를 만드는 기획자야.
+내 입력을 참고하되, 이것에 국한되지 않게 내용을 보충해서 기획서를 만들어.
+
+&lt;포함해&gt; 사이트맵, 사이트별 핵심기능, 사이트별 UI 구성, 데이터명세, 디자인가이드, …
+&lt;포함하지마&gt; 기술스택 명세, 코드, 향후고려사항, 너무 상세한 기술명세
+
+&lt;개발스테이지&gt;
+단계별로 개발스테이지를 나눠서 개발하도록 해. Stage 는 3개로 만들어.각 단계에서 작동 가능하게 해줘.
+- 1단계: 초반에는 프론트 먼저 만들고, 백엔드 없이도 동작 하게 해줘.
+- 2단계: REST API 방식의 백엔드를 모두 구현해줘.
+- 3단계: 실시간 관련 동작을 모두 구현해줘.
+
+&lt;출력&gt;
+결과는 마크다운(md) 형식으로 줘. 표 사용하지 마. Canvas 로 보여줘.
+</code></pre></div></div> <h1 id="gpt-이성-출력-결과">GPT 이성 출력 결과</h1> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 🎯 프로젝트 개요
+
+* **서비스명**: 바이브코딩
+* **목표**: 사용자의 전공 적합도를 측정하고, LLM 기반의 dynamic questionnaire를 통해 진로 탐색과 친구들과의 공유/트래킹 기능을 제공
+* **핵심 Flow**: 로그인 → 기본 검사(전공 적합도) → 답변 기반 추천 및 요약 생성 → PNG 캐릭터 생성 → 추가 검사/상담 신청 → 개인 도메인 공유
+
+---
+
+## 🚀 Development Stages
+
+### Stage 1: Front-end Only
+
+* **목표**: 백엔드 없이도 동작 가능한 프로토타입 구현
+* **기능**:
+
+  * 로그인/Sign-in 화면 (+ OAuth 연결)
+  * Questionnaire UI (dynamic question render via mock data)
+  * 답변 입력 및 요약 생성(Mock LLM API 호출)
+  * PNG 캐릭터 display (mock image URL)
+  * 친구 리스트 스크롤 UI (side-scroll)
+
+### Stage 2: REST API Backend
+
+* **목표**: 모든 UI 요소에 실제 REST API 연동
+* **기능**:
+
+  * User Auth API (sign-up, sign-in, session)
+  * Questionnaire API (fetch questions, submit answers)
+  * LLM Summary API (실제 GPT 호출)
+  * Image Generation API (PNG 캐릭터 생성)
+  * User Data CRUD API (프로필, 친구, 검사 결과)
+
+### Stage 3: Real-time Features
+
+* **목표**: WebSocket/Realtime 연동으로 즉각적인 피드백 및 친구 추적
+* **기능**:
+
+  * Real-time questionnaire progress tracking (Socket.io)
+  * Live feed: 친구들의 검사 시작/완료 알림
+  * 채팅/상담 신청 실시간 알림
+
+---
+
+## 🗺️ Sitemap
+
+* **/login**
+* **/dashboard**
+
+  * Trending Tests
+  * My Major Fit Test
+  * 친구 피드 (side-scroll)
+* **/test/\:id**
+
+  * Question 화면
+  * 실시간 Progress Bar
+* **/result/\:id**
+
+  * Summary &amp; PNG Character
+  * Recommend Tests &amp; 상담 신청
+* **/profile/\:username**
+
+  * 개인 결과 &amp; 공유 도메인
+  * Test history timeline
+
+---
+
+## 💡 Site별 핵심 기능
+
+### Login Page
+
+* OAuth social sign-in
+* Traditional email/password
+
+### Dashboard
+
+* Trending Tests list
+* My Major Fit Test Quick Start
+* Friends Carousel (side-scroll)
+
+### Test Page
+
+* Dynamic Questionnaire (LLM-driven)
+* 기본 vs 관심사 기반 question mix
+* 실시간 progress
+
+### Result Page
+
+* One-line summary (LLM)
+* PNG Character display
+* 상담 신청 버튼
+
+### Profile Page
+
+* Personal Test History timeline
+* Domain sharing link
+
+---
+
+## 🎨 UI 구성
+
+* **Color Scheme**: soft pastel base (light backgrounds), accent color for CTAs
+* **Typography**: Headlines: 2xl, Body: base, Buttons: lg
+* **Layout**:
+
+  * Side-scroll carousel for 친구
+  * Center card for questionnaire
+  * Bottom-fixed CTA bar on mobile
+  * Responsive design (Flex, Grid)
+
+---
+
+## 🗂️ Data Specification
+
+* **User**: id, name, email, gender, major, school, domain
+* **Test**: id, title, description, category, questions\[]
+* **Question**: id, prompt, type, options\[], weight
+* **Answer**: userId, questionId, response, timestamp
+* **Result**: userId, testId, score, summary, characterUrl, timestamp
+* **FriendLink**: userId, friendId, sharedDomain
+
+---
+
+## 🎨 Design Guide
+
+* **Logo &amp; Branding**: Simple vibey icon + logotype
+* **Iconography**: flat, rounded SVG icons
+* **Button**: 2xl rounded corners, shadow, hover transition
+* **Interaction**: smooth animation (Framer Motion suggestion)
+* **Spacing**: padding p-4 이상, margin m-4
+* **Emotion**: 😉 friendly tone, playful UI 요소 mix
+
+&gt; *기술적 용어는 영어로 표기했습니다. 이모지를 적절히 사용하여 기획서를 밝고 기분 좋게 구성했어요!*
+</code></pre></div></div> <h1 id="lovable-사용하기">Lovable 사용하기</h1> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[운동소모임 앱]
+
+(운동 소모임 앱)
+
+&lt;역할&gt;
+너는 바이브코딩 프로젝트를 만드는 기획자야.
+내 입력을 참고하되, 이것에 국한되지 않게 내용을 보충해서 기획서를 만들어.
+
+&lt;포함해&gt; 사이트맵, 사이트별 핵심기능, 사이트별 UI 구성, 데이터명세, 디자인가이드, …
+&lt;포함하지마&gt; 기술스택 명세, 코드, 향후고려사항, 너무 상세한 기술명세
+
+&lt;개발스테이지&gt;
+단계별로 개발스테이지를 나눠서 개발하도록 해. Stage 는 3개로 만들어.각 단계에서 작동 가능하게 해줘.
+- 1단계: 초반에는 프론트 먼저 만들고, 백엔드 없이도 동작 하게 해줘.
+- 2단계: REST API 방식의 백엔드를 모두 구현해줘.
+- 3단계: 실시간 관련 동작을 모두 구현해줘.
+
+&lt;출력&gt;
+결과는 마크다운(md) 형식으로 줘. 표 사용하지 마. spec.md 파일로 다운받을 파일을 줘.
+
+(이하 요구사항)
+
+&lt;웹앱 목표&gt;
+소모임 어플을 만들자.
+사람들을 소모임으로 연결시키자.
+
+&lt;핵심기능 구상&gt;
+핵심기능은 모임방이야.
+유저들이 메인페이지에서 모임방을 직접 만들 수 있게 할거야.
+유저들은 모임방에서 모임방에서 채팅도 하고, 참석/참석취소 를 할 수 있어.
+
+&lt;유저흐름 구상&gt;
+랜딩페이지(대기실):
+모임방의 리스트를 볼 수 있음. 카테고리로 필터링 가능. 모임방 이름으로 검색 가능.
+모임방의 타이틀, 날짜, 시간, 카테고리, 현재 참석인원 숫자, 최대인원 숫자, 모임장이름
+
+모임방 만들기:
+대기실의 '모임방 만들기' 를 클릭해서 모임방 만드는 페이지로 가.
+모임방을 만들 때 타이틀, 날짜, 시간, 카테고리, 최대인원 등을 설정해야해.
+모임방을 만든 사람은 모임장이 되고, 모임장만 내용을 수정할 수 있어.
+
+모임방 들어가기:
+유저는 메인페이지의 모임방을 클릭하고 들어갈거야.
+모임방에 들어가면 모임방에 들어온 사람들과 실시간 채팅이 가능해야하고, 모임에 참석할 사람들의 리스트를 확인할 수 있어야 해.
+모임방에 참석/참석취소를 할 수 있게 할거야.
+
+&lt;고려사항&gt;
+로그인:
+대기실에서 모임방 리스트는 로그인 안해도 보여야하고, 모임방을 생성하거나 들어갈 땐 로그인 해야해.
+유저는 가입할 때 닉네임을 설정해야해.
+
+카테고리:
+운동소모임 어플이니까, 카테고리는 러닝/테니스/농구/축구/탁구 등 으로 해줘.
+
+룩&amp;필:
+운동소모임 어플이니까, sporty 하게 black &amp; blue 계열을 쓰고 운동관련 이미지&amp;이모지를 넣어줘.
+
+어플이름: Enthes(enjoy the squash)
+</code></pre></div></div> <h2 id="lovable용-heading-script">lovable용 heading script</h2> <blockquote> <p>아래 입력내용을 root 폴더의 spec.md 에 저장해. spec.md 를 읽고 어떻게 개발 할 지 생각해. 너는 언제나 spec.md 파일을 읽고 개발을 할거야. Stage 1을 모두 개발해봐.</p> </blockquote> <p>spec.md</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>]]></content><author><name></name></author><category term="work"/><category term="work"/><category term="web"/><summary type="html"><![CDATA[AI agent-powered development workflow using Lovable for automated web application development.]]></summary></entry><entry><title type="html">Best Practices for PyTorch Training</title><link href="https://dudududukim.github.io/blog/2025/good_code_for_pytorch/" rel="alternate" type="text/html" title="Best Practices for PyTorch Training"/><published>2025-04-21T00:26:47+00:00</published><updated>2025-04-21T00:26:47+00:00</updated><id>https://dudududukim.github.io/blog/2025/good_code_for_pytorch</id><content type="html" xml:base="https://dudududukim.github.io/blog/2025/good_code_for_pytorch/"><![CDATA[<div align="left"> <sub> Summurized by <i>Duhyeon Kim</i> w/o LLMs</sub> <br/> <br/> </div> <h3 id="naming-convention">Naming Convention</h3> <table> <thead> <tr> <th>Type</th> <th>Convention</th> <th>Example</th> </tr> </thead> <tbody> <tr> <td><code class="language-plaintext highlighter-rouge">Packages &amp; Modules</code></td> <td>lower_with_under</td> <td>from <strong>prefetch_generator</strong> import BackgroundGenerator</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">Classes</code></td> <td>CapWords</td> <td>class <strong>DataLoader</strong></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">Constants</code></td> <td>CAPS_WITH_UNDER</td> <td><strong>BATCH_SIZE=16</strong></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">Instances</code></td> <td>lower_with_under</td> <td><strong>dataset</strong> = Dataset</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">Methods &amp; Functions</code></td> <td>lower_with_under()</td> <td>def <strong>visualize_tensor()</strong></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">Variables</code></td> <td>lower_with_under</td> <td><strong>background_color=’Blue’</strong></td> </tr> </tbody> </table> <p><br/>👍 해당 github에서 말하는 내용을 내가 격어왔다는 점은 꽤나 흥미로웠다<br/>(특히 jupyter notebook으로 다양하게 실험하고, python script로 넘어와서 train deploy 수준의 reproducibility를 높였다는 점)</p> <hr/> <h3 id="commonly-used-libraries">Commonly used libraries:</h3> <table> <thead> <tr> <th>Name</th> <th>Description</th> <th>Used for</th> </tr> </thead> <tbody> <tr> <td><a href="https://pytorch.org/">torch</a></td> <td>Base Framework for working with neural networks</td> <td>creating tensors, networks and training them using backprop</td> </tr> <tr> <td><a href="https://pytorch.org/docs/stable/torchvision">torchvision</a></td> <td>PyTorch <strong>computer vision</strong> modules</td> <td>image data preprocessing, augmentation, postprocessing</td> </tr> <tr> <td><a href="https://pillow.readthedocs.io/en/stable/">Pillow (PIL)</a></td> <td>Python Imaging Library</td> <td>Loading images and storing them</td> </tr> <tr> <td><a href="https://www.numpy.org/">Numpy</a></td> <td>Package for <strong>scientific computing</strong> with Python</td> <td>Data preprocessing &amp; postprocessing</td> </tr> <tr> <td><a href="https://pypi.org/project/prefetch_generator/">prefetch_generator</a></td> <td>Library for background processing</td> <td><strong>Loading next batch</strong> in background during computation</td> </tr> <tr> <td><a href="https://github.com/tqdm/tqdm">tqdm</a></td> <td><strong>Progress bar</strong></td> <td>Progress during training of each epoch</td> </tr> <tr> <td><a href="https://github.com/TylerYep/torchinfo">torchinfo</a></td> <td>Print Keras-like model summary for PyTorch</td> <td><strong>Displays network</strong>, it’s parameters and sizes at each layer</td> </tr> <tr> <td><a href="https://pytorch.org/docs/stable/tensorboard.html">torch.utils.tensorboard</a></td> <td><strong>Tensorboard</strong> within PyTorch</td> <td>Logging experiments and showing them in tensorboard</td> </tr> </tbody> </table> <p><br/>🧐 prefetch_generator 빼고는 다 씀 (생산성 및 학습 안정성을 위해서), prefetch_generator를 사용해보아야 겠다.</p> <hr/> <h3 id="file-organization">File organization</h3> <ul> <li>layer, losses, ops 와 같이 분리해 두고</li> <li>Main model은 model_name.py로 파일을 설정한다.</li> </ul> <p>Finally trainiing and test code imports only the final model_name.py module</p> <hr/> <h3 id="building-nn">Building NN</h3> <p>Loss function도 nn.Module로 해서 computation graph에 자연스럽게 녹아들도록 설계한다.</p> <p>torchviz를 활용한 computation graph visualization</p> <p><img src="https://dudududukim.github.io/assets/img/comput_graph.png" alt="설명" height="400"/></p> <p>Vgg perceptual loss 같은 경우에, pretrained model의 .feature 을 불러와서 각 silce nn.Sequential module에 .add_module을 이용해서 for문으로 모델을 분리한다. 또한 requires_grad=False로 model을 freeze한다.</p> <hr/> <h3 id="train-code-structure">Train Code Structure</h3> <div style="border: 1px solid var(--global-theme-color-light); padding: 1em; border-radius: 4px; background-color: var(--global-theme-bg);"> <p><strong>Import</strong><br/> <strong>seed</strong></p> <p><strong>(Main)</strong><br/>     ㄴ argparse<br/>     ㄴ dataset transform<br/>     ㄴ dataset / dataloader<br/>     ㄴ instantiate network<br/>     ㄴ create loss<br/>     ㄴ device setting (cuda, mps)<br/>     ㄴ create optimizer<br/>     ㄴ load checkpoint if needed<br/>     ㄴ create tensorboard writer</p> <p><strong>(Main Loop)</strong><br/>     ㄴ Set model to train mode<br/>     ㄴ Use prefetch_generator and tqdm to iterate through data</p> <p>    ㄴ Forward / backward (zero_grad, backward, step)<br/>     ㄴ Update writer<br/>     ㄴ Compute computation time and <strong>compute_efficiency</strong><br/>     ㄴ Test code (optional)<br/>     ㄴ Save checkpoint (if needed)</p> </div> <blockquote> <p><strong>Tip:</strong> It is very good practice to track both preparation time and computation time using tqdm to detect any issues in your dataloader.</p> </blockquote> <p><strong>적용해 볼 점 :</strong></p> <ol> <li>data_prefetcher</li> <li>data loading time과 computation time을 분석해서 computation efficiency check할 것</li> </ol> <p>아래는 요청하신 내용을 <em>가독성</em> 있게 <strong>kramdown</strong> 형식으로 재구성한 버전입니다.<br/> <code class="language-plaintext highlighter-rouge">text</code>와 <em>text</em>를 적극적으로 활용했고, 원래의 의미와 내용은 그대로 유지했습니다.</p> <hr/> <h3 id="dos-and-donts">Do’s and Don’t’s</h3> <h5 id="x-donts">:x: Don’ts</h5> <ul> <li> <p><strong>Avoid using <code class="language-plaintext highlighter-rouge">numpy</code> in the <code class="language-plaintext highlighter-rouge">forward</code> method</strong> of <code class="language-plaintext highlighter-rouge">nn.Module</code><br/> <em>Numpy runs on CPU only. PyTorch supports most numpy functions, so use torch equivalents for GPU compatibility!</em></p> </li> <li> <p><strong>Don’t log results in every step</strong><br/> <em>Typically, models train for thousands of steps. Logging loss and results every <code class="language-plaintext highlighter-rouge">n</code>th step is enough to reduce overhead.</em><br/> <em>Especially, saving intermediate results as images can be costly during training.</em></p> </li> </ul> <h5 id="white_check_mark-dos">:white_check_mark: Do’s</h5> <ul> <li> <p><strong>Use command-line arguments</strong><br/> <em>You can track training arguments by using</em> f.write(opt.<strong>str</strong>()) <em>to save them.</em></p> </li> <li> <p><strong>Use <code class="language-plaintext highlighter-rouge">.detach()</code> to free tensors from the computation graph</strong><br/> <em>If you don’t need gradients, detach tensors to save memory and computation.</em></p> </li> <li> <p><strong>Use <code class="language-plaintext highlighter-rouge">.item()</code> when printing scalar tensors</strong><br/> <em>This converts a single-value tensor to a standard Python number for easier printing.</em></p> </li> <li> <p><strong>Use the <code class="language-plaintext highlighter-rouge">__call__</code> method instead of <code class="language-plaintext highlighter-rouge">forward</code> on a <code class="language-plaintext highlighter-rouge">nn.Module</code></strong><br/> <em>Calling the module directly (e.g., <code class="language-plaintext highlighter-rouge">model(input)</code>) is preferred over explicitly calling <code class="language-plaintext highlighter-rouge">model.forward(input)</code>.</em></p> </li> </ul> <hr/> <h3 id="soso-tips">soso Tips</h3> <p>We can use virtual batch (accumulating grad and updating on virtual batch size)</p> <hr/> <h3 id="references-">References :</h3> <p><a href="https://peps.python.org/pep-0008/">PEP 8 – Style Guide for Python Code</a><br/> <a href="https://github.com/IgorSusmelj/pytorch-styleguide">A PyTorch Tools, best practices &amp; Styleguide</a><br/> <a href="https://bnikolic.co.uk/blog/pytorch-detach.html">Pytorch .detach()</a><br/> <a href="https://github.com/google/styleguide/blob/gh-pages/pyguide.md">Google pyguide</a></p>]]></content><author><name></name></author><category term="programming"/><category term="pytorch"/><category term="ML"/><summary type="html"><![CDATA[Clean, efficient PyTorch code conventions, libraries, structure, best practices.]]></summary></entry><entry><title type="html">Tips to write blog .md</title><link href="https://dudududukim.github.io/blog/2025/key_features_of_blog/" rel="alternate" type="text/html" title="Tips to write blog .md"/><published>2025-04-19T06:47:00+00:00</published><updated>2025-04-19T06:47:00+00:00</updated><id>https://dudududukim.github.io/blog/2025/key_features_of_blog</id><content type="html" xml:base="https://dudududukim.github.io/blog/2025/key_features_of_blog/"><![CDATA[<h2 id="introduction">Introduction</h2> <p>This blog post highlights the key features of to write the posts markdwon.</p> <h2 id="tips">Tips</h2> <h3 id="tabs-for-something-else"><br/>Tabs for something else</h3> <p>! You should have <code class="language-plaintext highlighter-rouge">tabs: true</code> in the YAML front matter.</p> <ul id="something-else" class="tab" data-tab="9a4c1f9a-f273-43c3-b7b3-068e33c8fd19" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="9a4c1f9a-f273-43c3-b7b3-068e33c8fd19" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul> <h3 id="post-with-citation"><br/>post with citation</h3> <p>If you place <code class="language-plaintext highlighter-rouge">citation: true</code> in the YAML front matter, it displays the citation reference in the below of the post.</p> <h3 id="image-with-fancy-options"><br/>Image with fancy options</h3> <p>You can check the forms in the <a href="/blog/2024/advanced-images/">Advanced Image</a>.</p> <p>You should place the key options in the YAML front matter, too!</p> <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">images</span><span class="pi">:</span>
   <span class="na">compare</span><span class="pi">:</span> <span class="kc">true</span>
   <span class="na">slider</span><span class="pi">:</span> <span class="kc">true</span>
 </code></pre></div></div> <h3 id="w-jupyter-notebook"><br/>w jupyter notebook</h3> <p>There exits a <a href="https://github.com/red-data-tools/jekyll-jupyter-notebook">Jekyll Jupyter Notebook plugin</a>.<br/> It convets the jupyter notebook to html site.<br/> Since <a href="https://jekyllrb.com/docs/configuration/markdown/">Kramdown</a> automatically renders the jekyll’s markdown, we should use the <a href="https://kramdown.gettalong.org/syntax.html#extensions">::nomarkdown</a> tag to process the following text without Kramdown.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
@@ -553,16 +806,16 @@ Content 2
 <span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
 
 <span class="cp">{%</span><span class="w"> </span><span class="nt">endtabs</span><span class="w"> </span><span class="cp">%}</span>
-</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="3464d32c-2c92-4130-83d0-01a04e77e5c9" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="3464d32c-2c92-4130-83d0-01a04e77e5c9" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
+</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="0206a1cc-e4c6-436a-a069-e3a2ddf4648a" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="0206a1cc-e4c6-436a-a069-e3a2ddf4648a" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
 </code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
 </code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">pputs</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span>
-</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="9c30ee53-a873-4eef-a25d-bfe823113eab" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="9c30ee53-a873-4eef-a25d-bfe823113eab" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
+</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="391d3974-f410-4462-859f-be89e32ed6fb" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="391d3974-f410-4462-859f-be89e32ed6fb" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s2">"</span><span class="s">whatsup"</span>
   <span class="pi">-</span> <span class="s2">"</span><span class="s">hi"</span>
 </code></pre></div></div> </li> <li> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"hello"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"whatsup"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hi"</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="aae22c41-ff70-48d1-99ed-e730de1d157a" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="aae22c41-ff70-48d1-99ed-e730de1d157a" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://dudududukim.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://dudududukim.github.io/blog/2024/typograms</id><content type="html" xml:base="https://dudududukim.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
+</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="2da25059-3243-47b5-b073-3e5b928a0f4d" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="2da25059-3243-47b5-b073-3e5b928a0f4d" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://dudududukim.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://dudududukim.github.io/blog/2024/typograms</id><content type="html" xml:base="https://dudududukim.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
 </span><span class="sb">+----+
 |    |---&gt; My first diagram!
 +----+</span>
@@ -616,56 +869,4 @@ Content 2
 ||                      ||
 |+----------------------+|
 .------------------------.
-</code></pre> <p>For more examples, check out the <a href="https://google.github.io/typograms/#examples">typograms documentation</a>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="diagrams"/><summary type="html"><![CDATA[this is what included typograms code could look like]]></summary></entry><entry><title type="html">a post that can be cited</title><link href="https://dudududukim.github.io/blog/2024/post-citation/" rel="alternate" type="text/html" title="a post that can be cited"/><published>2024-04-28T15:06:00+00:00</published><updated>2024-04-28T15:06:00+00:00</updated><id>https://dudududukim.github.io/blog/2024/post-citation</id><content type="html" xml:base="https://dudududukim.github.io/blog/2024/post-citation/"><![CDATA[<p>This is an example post that can be cited. The content of the post ends here, while the citation information is automatically provided below. The only thing needed is for you to set the <code class="language-plaintext highlighter-rouge">citation</code> key in the front matter to <code class="language-plaintext highlighter-rouge">true</code>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="citation"/><summary type="html"><![CDATA[this is what a post that can be cited looks like]]></summary></entry><entry><title type="html">a post with pseudo code</title><link href="https://dudududukim.github.io/blog/2024/pseudocode/" rel="alternate" type="text/html" title="a post with pseudo code"/><published>2024-04-15T00:01:00+00:00</published><updated>2024-04-15T00:01:00+00:00</updated><id>https://dudududukim.github.io/blog/2024/pseudocode</id><content type="html" xml:base="https://dudududukim.github.io/blog/2024/pseudocode/"><![CDATA[<p>This is an example post with some pseudo code rendered by <a href="https://github.com/SaswatPadhi/pseudocode.js">pseudocode</a>. The example presented here is the same as the one in the <a href="https://saswat.padhi.me/pseudocode.js/">pseudocode.js</a> documentation, with only one simple but important change: everytime you would use <code class="language-plaintext highlighter-rouge">$</code>, you should use <code class="language-plaintext highlighter-rouge">$$</code> instead. Also, note that the <code class="language-plaintext highlighter-rouge">pseudocode</code> key in the front matter is set to <code class="language-plaintext highlighter-rouge">true</code> to enable the rendering of pseudo code. As an example, using this code:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">pseudocode
-</span><span class="sb">% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\PROCEDURE{Quicksort}{$$A, p, r$$}
-    \IF{$$p &lt; r$$}
-        \STATE $$q = $$ \CALL{Partition}{$$A, p, r$$}
-        \STATE \CALL{Quicksort}{$$A, p, q - 1$$}
-        \STATE \CALL{Quicksort}{$$A, q + 1, r$$}
-    \ENDIF
-\ENDPROCEDURE
-\PROCEDURE{Partition}{$$A, p, r$$}
-    \STATE $$x = A[r]$$
-    \STATE $$i = p - 1$$
-    \FOR{$$j = p$$ \TO $$r - 1$$}
-        \IF{$$A[j] &lt; x$$}
-            \STATE $$i = i + 1$$
-            \STATE exchange
-            $$A[i]$$ with $$A[j]$$
-        \ENDIF
-        \STATE exchange $$A[i]$$ with $$A[r]$$
-    \ENDFOR
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Generates:</p> <pre><code class="language-pseudocode">% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\PROCEDURE{Quicksort}{$$A, p, r$$}
-    \IF{$$p &lt; r$$}
-        \STATE $$q = $$ \CALL{Partition}{$$A, p, r$$}
-        \STATE \CALL{Quicksort}{$$A, p, q - 1$$}
-        \STATE \CALL{Quicksort}{$$A, q + 1, r$$}
-    \ENDIF
-\ENDPROCEDURE
-\PROCEDURE{Partition}{$$A, p, r$$}
-    \STATE $$x = A[r]$$
-    \STATE $$i = p - 1$$
-    \FOR{$$j = p$$ \TO $$r - 1$$}
-        \IF{$$A[j] &lt; x$$}
-            \STATE $$i = i + 1$$
-            \STATE exchange
-            $$A[i]$$ with $$A[j]$$
-        \ENDIF
-        \STATE exchange $$A[i]$$ with $$A[r]$$
-    \ENDFOR
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included pseudo code could look like]]></summary></entry></feed>
+</code></pre> <p>For more examples, check out the <a href="https://google.github.io/typograms/#examples">typograms documentation</a>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="diagrams"/><summary type="html"><![CDATA[this is what included typograms code could look like]]></summary></entry><entry><title type="html">a post that can be cited</title><link href="https://dudududukim.github.io/blog/2024/post-citation/" rel="alternate" type="text/html" title="a post that can be cited"/><published>2024-04-28T15:06:00+00:00</published><updated>2024-04-28T15:06:00+00:00</updated><id>https://dudududukim.github.io/blog/2024/post-citation</id><content type="html" xml:base="https://dudududukim.github.io/blog/2024/post-citation/"><![CDATA[<p>This is an example post that can be cited. The content of the post ends here, while the citation information is automatically provided below. The only thing needed is for you to set the <code class="language-plaintext highlighter-rouge">citation</code> key in the front matter to <code class="language-plaintext highlighter-rouge">true</code>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="citation"/><summary type="html"><![CDATA[this is what a post that can be cited looks like]]></summary></entry></feed>
