@@ -10,7 +10,7 @@ category: work
 # ppt_path: /assets/projects/lyrics_recommandation.pptx
 
 pretty_table: true
-ongoing : true
+ongoing : false
 
 project_date: 2025-06-30
 

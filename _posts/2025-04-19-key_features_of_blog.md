@@ -2,7 +2,7 @@
 layout: post
 title: Tips to write blog .md
 date: 2025-04-19 15:47:00 +0900
-last_updated: 2025-04-21 10:01:06 +09:00
+last_updated: 2025-08-23 14:31:51 +09:00
 description: this is the page for me to write the _posts markdown
 tags: tips markdown Kramdown
 categories: jekyll
@@ -10,7 +10,7 @@ citation : true
 tabs: true
 toc:
   sidebar: left
-featured : true
+featured : false
 thumbnail : assets/img/jekyll.svg
 
 ---

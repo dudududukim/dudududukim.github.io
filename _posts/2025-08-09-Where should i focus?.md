@@ -2,10 +2,10 @@
 layout: post
 title: Where should i focus?
 date: 2025-08-09 11:22:20 +09:00
-last_updated: 2025-08-09 14:16:43 +09:00
+last_updated: 2025-10-09 22:25:46 +09:00
 description: Thinking about my interests
-tags: myself
-categories: me
+tags: thinks
+categories: thinks      # 
 
 citation: false
 tabs: true
@@ -13,7 +13,7 @@ pretty_table: true
 # toc:
 #   sidebar: left
 
-featured: true
+featured: false
 thumbnail: assets/img/me_confuse.png
 related_posts: false
 

@@ -20,6 +20,7 @@
         "area": "Electrical and Electronic Engineering",
         "studyType": "B.S.",
         "startDate": "2019-03-01",
+        "endDate" : "2025-08-25",
         "score": "4.05/4.5"
       }
     ],
@@ -29,11 +30,12 @@
             "level": "Advanced",
             "icon": "fa-solid fa-code",
             "keywords": [
-            "PyTorch",
+            "verilog",
             "Python",
             "C",
             "Matlab",
-            "(System)Verilog"
+            "pytorhc",
+            "openai api"
             ]
         },
         {
@@ -81,7 +83,7 @@
       },
       {
         "language": "English",
-        "fluency": "OPIc IH"
+        "fluency": "OPIc IH / TEPS 432"
       }
     ],
     "projects": [
