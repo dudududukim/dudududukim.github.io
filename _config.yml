@@ -299,6 +299,11 @@ plugins:
   - jekyll-seo-tag
 
 # ===========================================
+# GOOGLE ANALYTICS CONFIGURATION
+# ===========================================
+google_analytics: "G-LW3RZ14B73"  # CHANGE THIS: Your Google Analytics Measurement ID
+
+# ===========================================
 # IMAGE RESIZING CONFIGURATION
 # ===========================================
 # Automatically resize images during build to reduce file size
