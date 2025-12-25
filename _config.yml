@@ -301,7 +301,7 @@ plugins:
 # ===========================================
 # GOOGLE ANALYTICS CONFIGURATION
 # ===========================================
-google_analytics: "G-LW3RZ14B73"  # CHANGE THIS: Your Google Analytics Measurement ID
+google_analytics: "G-H2V9LG6YRS"  # CHANGE THIS: Your Google Analytics Measurement ID
 
 # ===========================================
 # IMAGE RESIZING CONFIGURATION

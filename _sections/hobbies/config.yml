@@ -5,7 +5,7 @@ button_text: "Browse Hobbies"
 button_url: "/hobbies/"
 order: 20
 type: "tech-bites-preview"
-enabled: true
+enabled: false
 main_page_count: 3
 pagination: 10
 show_dates: true

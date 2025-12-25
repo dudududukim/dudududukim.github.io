@@ -1,0 +1,15 @@
+title: "Lessons"
+key: "lessons"
+description: "Lessons that i've earned through personal projects, courses, and more."
+button_text: "Browse Lessons"
+button_url: "/lessons/"
+order: 20
+type: "tech-bites-preview"
+enabled: true
+main_page_count: 3
+pagination: 10
+show_dates: true
+show_categories: true
+filter_categories:
+  - "Verilog"
+
