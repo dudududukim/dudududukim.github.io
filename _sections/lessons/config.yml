@@ -12,4 +12,5 @@ show_dates: true
 show_categories: true
 filter_categories:
   - "Verilog"
+  - "TIPS"
 
