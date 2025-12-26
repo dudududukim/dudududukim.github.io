@@ -11,3 +11,8 @@ vendor/
 .agent/
 .gemini/
 .antigravityrules
+
+# Exclude original high-res images from git (copyright protection)
+assets/images/films/*
+# But include resized versions cache (for git commits and deployment)
+!assets/images/films/resize/
