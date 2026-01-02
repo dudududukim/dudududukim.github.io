@@ -25,6 +25,24 @@ It is recommended to install gtkwave with below command line.
 brew install --HEAD randomplum/gtkwave/gtkwave
 ```
 
+There was official docs for gtkwave.
+
+[GTKWave Documents](https://gtkwave.github.io/gtkwave/install/mac.html)
+
+you can install through give commands.
+
+```bash
+brew install desktop-file-utils shared-mime-info gobject-introspection gtk-mac-integration meson ninja pkg-config gtk+3 gtk4
+
+git clone https://github.com/gtkwave/gtkwave.git gtkwave
+cd gtkwave
+
+meson setup build --prefix=/opt
+meson compile -C build # Start compile
+sudo meson install -C build # Install gtkwave
+```
+
+
 ### 2. task 문법 - verilog
 
 task 문법을 사용하면 TB를 좀 더 깔끔하고 modular하게 작성할 수 있다.
