@@ -13,4 +13,5 @@ show_categories: true
 filter_categories:
   - "Verilog"
   - "TIPS"
+  - "Settings"
 

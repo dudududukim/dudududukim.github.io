@@ -4,7 +4,7 @@ date: 2025-12-24
 section: "lessons"
 categories: ["Verilog", "TIPS"]
 description: "verilog testbench and some tips"
-reading_time: 1
+reading_time: 5
 ---
 
 ## Learned
