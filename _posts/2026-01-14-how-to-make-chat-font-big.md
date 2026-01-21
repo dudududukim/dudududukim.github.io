@@ -1,9 +1,9 @@
 ---
-title: "How to make Antigravity, VSCode Agent UI font size bigger"
+title: "How to make Antigravity, VS Code Agent UI font size bigger"
 date: 2026-01-14
 section: "lessons"
 categories: ["Settings", "TIPS"]
-description: ""
+description: "how to increase Antigravity Agent Chat UI font size using Custom CSS and JS Loader extension "
 reading_time: 3
 ---
 
